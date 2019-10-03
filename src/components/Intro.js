@@ -1,53 +1,83 @@
 import React from 'react'
-
-const Intro = props => (
-    <div className="row">
-        <div class="col xl12 l12 m12 s12 intro-section">
-            <div className="container section">
+import WOW from "wowjs";
+class Intro extends React.Component{
+    componentDidMount() {
+        const wow = new WOW.WOW();
+        wow.init();
+    }
+    
+    render(){
+        
+        const fullName= "John Doe";
+        const designation= "Web Developer";
+        const phone= "0123456789";
+        const email= "john@email.com";
+        const address= "Evergreen terrace";
+        const github= "github link";
+        const linkedin= "linkedin link";
+        const image= "https://previews.123rf.com/images/eugenesergeev/eugenesergeev1605/eugenesergeev160500180/56871195-bearded-man-smoking-cigar-outdoor-square-portrait-with-selective-focus.jpg";
+        const desc= "Prolific, full stack web developer with a passion for metrics and beating former 'best-yets.' Prototyped 25 new product features per year for Flexor, Inc. Decreased rework by 22% and costs by 15%. Consistently receive high user experience scores for all web development projects, including a 55% increase for Flexor, Inc. Passionate about building world class web applications. One of my sites received a 2015 Webby for Best Navigation and Structure.";
+    
+        return (
             <div className="row">
-                <div class="col xl3 l3 m12 s12 profile-pic" >
-                    <img src={props.image} />
-                </div>
-                <div class="col xl9 l9 m12 s12">
-                    <div class="col s12">
-                        <h1>{props.fullName}</h1>
-                        <h3>{props.designation}</h3>
+                <div className="col xl12 l12 m12 s12 intro-section">
+                    <div className="container section">
+                        <div className="row">
+                            <div className="col xl3 l3 m12 s12 profile-pic wow bounceIn" >
+                                <img src={image} />
+                            </div>
+                            <span className="col xl9 l9 m12 s12">
+                                <div className="col s12 ">
+                                    <h1 
+                                        className="wow bounceInDown" 
+                                        data-wow-duration="0.9s" 
+                                        data-wow-delay="1s">
+                                        {fullName}
+                                    </h1> 
+                                    <h3 
+                                        className="wow bounceInDown" 
+                                        data-wow-duration="1s" 
+                                        data-wow-delay="0.5s">
+                                        {designation}
+                                    </h3>
+                                </div>
+                                <span className="col s12 contact-details">
+                                    <div className="col xl6 l6 m6 s6 phone">
+                                        <a href="option.link" target="_blank" >          
+                                            icon <span className="hide-on-small-only">{phone}</span><span className="hide-on-med-and-up">Call me</span>
+                                        </a>
+                                    </div>
+                                    <div className="col xl6 l6 m6 s6 email">
+                                        <a href="option.link" target="_blank" >          
+                                            icon <span className="hide-on-small-only">{email}</span><span className="hide-on-med-and-up">Email me</span>
+                                        </a>
+                                    </div>
+                                    <span className="col xl6 l6 m6 s6 github">
+                                        <a href="option.link" target="_blank" >
+                                        <i className="fab fa-github"></i> <span>{github}</span><span className="hide-on-med-and-up">github</span>
+                                        </a>
+                                    </span>
+                                    <div className="col xl6 l6 m6 s6 linkedin">
+                                        <a href="option.link" target="_blank" >
+                                            icon <span>{linkedin}</span><span className="hide-on-med-and-up">linkedin</span>
+                                        </a>
+                                    </div>
+                                    <div className="col xl12 l12 m12 s12 address">
+                                        <a>          
+                                            icon <span>{address}</span><span className="hide-on-med-and-up">adress</span>
+                                        </a>
+                                    </div>
+                                </span>
+                            </span>
+                        </div>
+                        <div className="row">
+                            <div className="col xl12 l12 m12 s12 desc">{this.props.desc}</div>
+                        </div>
                     </div>
-                    <div class="col s12 contact-details">
-                        <div class="col xl6 l6 m6 s6 phone">
-                            <a href="option.link" target="_blank" >          
-                                icon <span class="hide-on-small-only">{ props.phone }</span><span class="hide-on-med-and-up">Call me</span>
-                            </a>
-                        </div>
-                        <div class="col xl6 l6 m6 s6 email">
-                            <a href="option.link" target="_blank" >          
-                                icon <span class="hide-on-small-only">{ props.email }</span><span class="hide-on-med-and-up">Email me</span>
-                            </a>
-                        </div>
-                        <div class="col xl6 l6 m6 s6 github">
-                            <a href="option.link" target="_blank" >
-                            <i class="fab fa-github"></i> <span>{ props.github }</span><span class="hide-on-med-and-up">github</span>
-                            </a>
-                        </div>
-                        <div class="col xl6 l6 m6 s6 linkedin">
-                            <a href="option.link" target="_blank" >
-                                icon <span>{ props.linkedin }</span><span class="hide-on-med-and-up">linkedin</span>
-                            </a>
-                        </div>
-                        <div class="col xl12 l12 m12 s12 address">
-                            <a>          
-                                icon <span>{ props.address }</span><span class="hide-on-med-and-up">adress</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className="row">
-                <div class="col xl12 l12 m12 s12 desc">{props.desc}</div>
                 </div>
             </div>
-        </div>
-    </div>
-)
+        );
+    }
+};
 
 export default Intro;
