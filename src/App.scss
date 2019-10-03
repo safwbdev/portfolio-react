@@ -1,42 +1,26 @@
-body{
-  h1{
-      color: red;
-  }
-}
-
-.weather{
-  .output{
-      padding: 0;
-
-      .title-icon{
-          padding: 0;
-
-          h4{
-              margin: 0;
-              display: flex;
-              align-items: center;
-          }
-      }
-  }
-  .form{
-      display: flex;
-      input[type="text"]{
-          border: 1px solid red;
-          // display: flex;
-
-      }
-      
-  }
-}
-
 .intro-section{
   background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
-    padding: 0;
-    float: left;
+  padding: 0;
+
+  h1{
+    margin-bottom: 5px;
+  }
+  h3{
+    font-style: italic;
+    margin: 0;;
+  }
   .profile-pic{
     img{
       border-radius: 50%;
+      margin: 2.8rem 0 1.68rem 0;
       width: 100%;
+    }
+  }
+  .contact-details{
+    margin: 20px 0 0 0;
+    a{
+      color: #333333;
+
     }
   }
 
@@ -44,3 +28,4 @@ body{
 select{
   display: block !important;
 }
+
