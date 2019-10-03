@@ -28,6 +28,19 @@ body{
       
   }
 }
+
+.intro-section{
+  background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
+    padding: 0;
+    float: left;
+  .profile-pic{
+    img{
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+
+}
 select{
   display: block !important;
 }

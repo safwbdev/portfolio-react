@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Weather from './components/Weather';
+import Intro from './components/Intro';
 import Navbar from './components/Navbar';
 import './App.scss';
 
@@ -58,9 +59,23 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
-        <div className="container section">
+        {/* <div className="container section"> */}
           <div className="row weather">
-            <div className="col xl8 l8 m6 s12 output">
+          <div className="row">
+            
+            <Intro
+            fullName="Stefaan Fangman"
+            designation="Web Developer"
+            phone="0123456789"
+            email="stefaan@email.com"
+            address="Evergreen terrace"
+            github="github link"
+            linkedin="linkedin link"
+            image="https://previews.123rf.com/images/eugenesergeev/eugenesergeev1605/eugenesergeev160500180/56871195-bearded-man-smoking-cigar-outdoor-square-portrait-with-selective-focus.jpg"
+            />
+
+          </div>
+            {/* <div className="col xl8 l8 m6 s12 output">
               <Weather
                 temperature={this.state.temperature}
                 temp_min={this.state.temp_min}
@@ -71,12 +86,13 @@ class App extends React.Component {
                 description={this.state.description}
                 icon={this.state.icon}
                 error={this.state.error} />
+                
             </div>
             <div className="col xl4 l4 m6 s12 form">
               <Form getWeather={this.getWeather} />
-            </div>
+            </div> */}
           </div>
-        </div>
+        {/* </div> */}
       </div>
     );
   }
