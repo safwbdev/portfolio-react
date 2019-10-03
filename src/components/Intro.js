@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Intro = props => (
+    <div className="row">
     <div class="col xl12 l12 m12 s12 intro-section">
         <div className="container section">
                 <div class="col xl3 l3 m12 s12 profile-pic" >
@@ -64,6 +65,7 @@ const Intro = props => (
                         </div>
 
                     </div> */}
+                </div>
                 </div>
                 </div>
                 </div>
