@@ -22,7 +22,7 @@ class Projects extends React.Component{
                                             <div class="links">
                                                 { item.demoURL !== null
                                                 ? <span>
-                                                    <a href={item.demoURL}>
+                                                    <a href={item.demoURL} target="_blank">
                                                         <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.type == "client" ? <span>Visit Site</span> : <span>Demo</span>}
                                                     </a>
                                                 </span>
@@ -34,7 +34,7 @@ class Projects extends React.Component{
                                                 }
                                                 { item.githubURL !== null
                                                 ? <span>
-                                                    <a href={item.githubURL}>
+                                                    <a href={item.githubURL} target="_blank">
                                                         <FontAwesomeIcon icon={['fab', 'github']} /> Visit Github
                                                     </a>
                                                 </span>
@@ -69,11 +69,44 @@ class Projects extends React.Component{
                     name:"BitRatez",
                     desc:"BitCoin currency rate checker",
                     tools:["NextJS", "Bootstrap"],
-                    demoURL:"Site URL",
-                    githubURL: "Github URL",
+                    demoURL:null,
+                    githubURL: "https://github.com/safwbdev/BitRatez",
+                    type:"personal"
+                },
+                {
+                    name:"The Weather Man Can!",
+                    desc:"Weather App that shows the current from different cities using the openWeather API",
+                    tools:["React JS", "Material"],
+                    demoURL:"https://zealous-sammet-364d1d.netlify.com/",
+                    githubURL: "https://github.com/safwbdev/weather-app",
+                    type:"personal"
+                },
+                {
+                    name:"Online portfolio",
+                    desc:"The current site you're on. Like it? Made it myself.",
+                    tools:["React JS", "Material"],
+                    demoURL:null,
+                    githubURL: null,
+                    type:"personal"
+                },
+                {
+                    name:"Online portfolio(Vue & Firebase)",
+                    desc:"This version was originally meant to be used here. But then, DAMN, is the react version better! (Yes, I am biased)",
+                    tools:["Vue JS", "Material", "Firebase"],
+                    demoURL:null,
+                    githubURL: null,
+                    type:"personal"
+                },
+                {
+                    name:"Keto Recipes",
+                    desc:"Built this as an excercise first, then continued on it to help me lose weight. (Lost 15 kilos thanks to this!)",
+                    tools:["React JS", "REST API", "Bootstrap"],
+                    demoURL:null,
+                    githubURL: null,
                     type:"personal"
                 },
         ];
+        // https://zealous-sammet-364d1d.netlify.com/
         return(
             <div className="container project-section">
                 <div className="row">
