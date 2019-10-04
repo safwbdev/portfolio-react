@@ -25,12 +25,8 @@ class App extends React.Component {
             />
             <Projects  />
             <Skills  />
-            <div className="container">
-              <div className="row">
-                <Experience  />
-                <Education  />
-              </div>
-            </div>
+            <Experience  />
+            <Education  />
       </div>
     );
   }

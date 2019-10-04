@@ -35,7 +35,7 @@ class Projects extends React.Component{
                                                 { item.githubURL !== null
                                                 ? <span>
                                                     <a href={item.githubURL} target="_blank">
-                                                        <FontAwesomeIcon icon={['fab', 'github']} /> Visit Github
+                                                        <FontAwesomeIcon icon={['fab', 'github']} /> Github
                                                     </a>
                                                 </span>
                                                 : ""

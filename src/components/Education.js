@@ -25,16 +25,12 @@ class Education extends React.Component{
         ];
 
         return(
-            <div className="row col xl12 l12 m12 s12">
-                <div className="section">
-                    <div className="row">
+            <div className="container school-section">
+                <div className="row">
                         <h4>Education</h4>
-                        <div className="col xl12 l12 m12 s12">
-                            {getEducation(educationList)}
-                        </div>
+                        {getEducation(educationList)}
                     </div>
                 </div>
-            </div>
         );
 
         function getEducation(array) {

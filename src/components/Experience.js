@@ -83,14 +83,10 @@ class Experience extends React.Component{
         ];
 
         return(
-            <div className="row col xl12 l12 m12 s12">
-                <div className="section">
-                    <div className="row">
-                        <h4>Work Experience</h4>
-                        <div className="col xl12 l12 m12 s12">
-                            {getExperience(experienceList)}
-                        </div>
-                    </div>
+            <div className="container work-section">
+                <div className="row">
+                    <h4>Work Experience</h4>
+                    {getExperience(experienceList)}
                 </div>
             </div>
         )
@@ -103,9 +99,9 @@ class Experience extends React.Component{
                                         <span className="position"  >{item.role}</span> | <span className="duration">{item.startDate} - {item.endDate}</span>
                                     </div>
                                     <div>
-                                        <span className="company">{item.company}</span> | <span>{item.location}</span>
+                                        <span className="company">{item.company}</span> | <span className="location">{item.location}</span>
                                     </div>
-                                    <div>
+                                    <div className="desc">
                                         {getDesc(item.desc)}
                                     </div>
                                 </div>;

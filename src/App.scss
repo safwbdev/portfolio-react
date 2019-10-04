@@ -84,3 +84,56 @@
   }
 }
 
+.work-section{
+  .work{
+    padding: 0;
+    margin: 0;
+    .position{
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .duration{
+      font-size: 16px;
+    }
+    .company{
+      font-weight: bold;
+    }
+    .location{
+      font-size: 16px;
+      font-style: italic;
+
+    }
+    .desc{
+      ul{
+        list-style-type: initial;
+        margin: 10px 0 25px 30px;
+        li{
+          list-style-type: initial;
+          
+        }
+      }
+    } 
+  }
+}
+.school-section{
+  .school{
+    .grad-year{
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .field{
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .name{
+      font-size: 16px;
+    }
+    .location{
+      font-size: 16px;
+      font-style: italic;
+    }
+
+  }
+
+}
+

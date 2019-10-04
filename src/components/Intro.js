@@ -31,14 +31,14 @@ class Intro extends React.Component{
                                 <div className="col s12 ">
                                     <h1 
                                         className="wow bounceInDown" 
-                                        data-wow-duration="0.9s" 
-                                        data-wow-delay="1s">
+                                        data-wow-duration="0.5s" 
+                                        data-wow-delay="0.5s">
                                         {fullName}
                                     </h1> 
                                     <h3 
                                         className="wow bounceInDown" 
-                                        data-wow-duration="1s" 
-                                        data-wow-delay="0.5s">
+                                        data-wow-duration="0.5s" 
+                                        data-wow-delay="0.2s">
                                         {designation}
                                     </h3>
                                 </div>
