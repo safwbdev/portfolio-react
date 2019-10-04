@@ -10,13 +10,13 @@ class Skills extends React.Component{
                         <div>
                             {array.map(function(item, key){
                                 if(item.type === skillType)
-                                return <span className={color + " chip"}  key={ key }><FontAwesomeIcon icon={[item.icon[0], item.icon[1]]} /> | {item.name}</span>;
+                                return <span className={color + " chip"}  key={ key }><FontAwesomeIcon icon={[item.icon[0], item.icon[1]]} />&nbsp;&nbsp;{item.name}</span>;
                             })}
                         </div>
                     </div>
         }
         const basicSkills =[
-            {position_id:1, name:"AJAX", icon:["fab","code"], type:"essentials"},
+            {position_id:1, name:"AJAX", icon:["fas","code"], type:"essentials"},
             {position_id:1, name:"Agile software development", icon:["fas","code"], type:"essentials"},
             {position_id:1, name:"Coding & Programming", icon:["fas","code"], type:"essentials"},
             {position_id:1, name:"Content Management Systems", icon:["fas","desktop"], type:"essentials"},
@@ -93,12 +93,12 @@ class Skills extends React.Component{
             {position_id:1, name:"Photoshop", icon:["fab","adobe"], type:"design"},
         ];
         return(  
-            <div className="container">
+            <div className="container skills-section">
                 <div className="row">
                     <h4>Skills</h4>
                     <div className="col s12">
-                        {getSkills("Areas of Expertise", "essentials", "blue lighten-3", basicSkills)}
-                        {getSkills("Technical", "technical", "lime", basicSkills)}
+                        {getSkills("Areas of Expertise", "essentials", "indigo lighten-4", basicSkills)}
+                        {getSkills("Technical", "technical", "blue lighten-3", basicSkills)}
                         {getSkills("Frameworks & Libraries", "framework", "lime", basicSkills)}
                         {getSkills("Database", "database", "yellow", basicSkills)}
                         {getSkills("Content Mangement Systems", "cms", "orange lighten-2", basicSkills)}

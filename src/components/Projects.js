@@ -75,7 +75,7 @@ class Projects extends React.Component{
                 },
         ];
         return(
-            <div className="container">
+            <div className="container project-section">
                 <div className="row">
                     <h4>Portfolio</h4>
                     <div className="col s12">
