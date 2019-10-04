@@ -1,5 +1,7 @@
 import React from 'react'
 import WOW from "wowjs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 class Intro extends React.Component{
     componentDidMount() {
         const wow = new WOW.WOW();
@@ -7,7 +9,6 @@ class Intro extends React.Component{
     }
     
     render(){
-        
         const fullName= "John Doe";
         const designation= "Web Developer";
         const phone= "0123456789";
@@ -24,7 +25,7 @@ class Intro extends React.Component{
                     <div className="container section">
                         <div className="row">
                             <div className="col xl3 l3 m12 s12 profile-pic wow bounceIn" >
-                                <img src={image} />
+                                <img src={image} alt="" />
                             </div>
                             <span className="col xl9 l9 m12 s12">
                                 <div className="col s12 ">
@@ -43,27 +44,27 @@ class Intro extends React.Component{
                                 </div>
                                 <span className="col s12 contact-details">
                                     <div className="col xl6 l6 m6 s6 phone">
-                                        <a href="option.link" target="_blank" >          
-                                            icon <span className="hide-on-small-only">{phone}</span><span className="hide-on-med-and-up">Call me</span>
+                                        <a href="option.link" target="_blank" >
+                                        <FontAwesomeIcon icon={['fas', 'phone']} /> <span className="hide-on-small-only">{phone}</span><span className="hide-on-med-and-up">Call me</span>
                                         </a>
                                     </div>
                                     <div className="col xl6 l6 m6 s6 email">
-                                        <a href="option.link" target="_blank" >          
-                                            icon <span className="hide-on-small-only">{email}</span><span className="hide-on-med-and-up">Email me</span>
+                                        <a href="option.link" target="_blank" >
+                                            <FontAwesomeIcon icon={['fas', 'envelope']} /> <span className="hide-on-small-only">{email}</span><span className="hide-on-med-and-up">Email me</span>
                                         </a>
                                     </div>
                                     <span className="col xl6 l6 m6 s6 github">
                                         <a href="option.link" target="_blank" >
-                                        <i className="fab fa-github"></i> <span>{github}</span><span className="hide-on-med-and-up">github</span>
+                                        <FontAwesomeIcon icon={['fab', 'github']} /> <span>{github}</span><span className="hide-on-med-and-up">github</span>
                                         </a>
                                     </span>
                                     <div className="col xl6 l6 m6 s6 linkedin">
                                         <a href="option.link" target="_blank" >
-                                            icon <span>{linkedin}</span><span className="hide-on-med-and-up">linkedin</span>
+                                        <FontAwesomeIcon icon={['fab', 'linkedin']} /> <span>{linkedin}</span><span className="hide-on-med-and-up">linkedin</span>
                                         </a>
                                     </div>
                                     <div className="col xl12 l12 m12 s12 address">
-                                        <a>          
+                                        <a href="/">          
                                             icon <span>{address}</span><span className="hide-on-med-and-up">adress</span>
                                         </a>
                                     </div>
@@ -71,7 +72,7 @@ class Intro extends React.Component{
                             </span>
                         </div>
                         <div className="row">
-                            <div className="col xl12 l12 m12 s12 desc">{this.props.desc}</div>
+                            <div className="col xl12 l12 m12 s12 desc">{desc}</div>
                         </div>
                     </div>
                 </div>
