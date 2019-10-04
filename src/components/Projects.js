@@ -91,10 +91,10 @@ class Projects extends React.Component{
                 },
                 {
                     name:"Online portfolio(Vue & Firebase)",
-                    desc:"This version was originally meant to be used here. But then, DAMN, is the react version better! (Yes, I am biased)",
+                    desc:"This version was originally meant to be used here (with CRUD included). But DAMN, is the react version better! (Yes, I am biased)",
                     tools:["Vue JS", "Material", "Firebase"],
                     demoURL:null,
-                    githubURL: null,
+                    githubURL: "null",
                     type:"personal"
                 },
                 {
@@ -106,23 +106,24 @@ class Projects extends React.Component{
                     type:"personal"
                 },
         ];
-        // https://zealous-sammet-364d1d.netlify.com/
         return(
-            <div className="container project-section">
-                <div className="row">
-                    <h4>Portfolio</h4>
-                    <div className="col s12">
-                        <h5>Client Projects<sup>*</sup></h5>
-                        {getProjects(projectList, "client")}
+            <div className="project-section">
+                <div className="container">
+                    <div className="row">
+                        <h4>Portfolio</h4>
                         <div className="col s12">
-                            <span class="tnc">* Projects shown are displayed with persmission from the original owners</span>
+                            <h5>Client Projects<sup>*</sup></h5>
+                            {getProjects(projectList, "client")}
+                            <div className="col s12">
+                                <span class="tnc">* Projects shown are displayed with persmission from the original owners</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col s12">
-                        <h5>Personal Projects<sup>**</sup></h5>
-                        {getProjects(projectList, "personal")}
                         <div className="col s12">
-                            <span class="tnc">** Just stuff I do for fun!</span>
+                            <h5>Personal Projects<sup>**</sup></h5>
+                            {getProjects(projectList, "personal")}
+                            <div className="col s12">
+                                <span class="tnc">** Just stuff I do for fun!</span>
+                            </div>
                         </div>
                     </div>
                 </div>

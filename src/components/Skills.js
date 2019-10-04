@@ -24,6 +24,7 @@ class Skills extends React.Component{
             {position_id:1, name:"HTML5", icon:["fab","html5"], type:"technical"},
             {position_id:1, name:"JQuery", icon:["fas","code"], type:"technical"},
             {position_id:1, name:"Java", icon:["fab","java"], type:"technical"},
+            {position_id:1, name:"JSON", icon:["fas","code"], type:"technical"},
             {position_id:1, name:"JavaScript", icon:["fab","js"], type:"technical"},
             {position_id:1, name:"Node.js", icon:["fab","node"], type:"technical"},
             {position_id:1, name:"PHP", icon:["fab","php"], type:"technical"},
@@ -82,18 +83,20 @@ class Skills extends React.Component{
             {position_id:1, name:"Photoshop", icon:["fab","adobe"], type:"design"},
         ];
         return(
-            <div className="container skills-section">
-                <div className="row">
-                    <h4>Skills</h4>
-                    <div className="col s12">
-                        {getSkills("Areas of Expertise", "essentials", "indigo lighten-4", basicSkills)}
-                        {getSkills("Technical", "technical", "blue lighten-3", basicSkills)}
-                        {getSkills("Frameworks & Libraries", "framework", "lime", basicSkills)}
-                        {getSkills("Database", "database", "yellow", basicSkills)}
-                        {getSkills("Content Mangement Systems", "cms", "orange lighten-2", basicSkills)}
-                        {getSkills("Operating Systems", "os", "red lighten-2", basicSkills)}
-                        {getSkills("Tools", "tool", "purple lighten-4", basicSkills)}
-                        {getSkills("Design", "design", "purple lighten-3", basicSkills)}
+            <div className="skills-section">
+                <div className="container">
+                    <div className="row">
+                        <h4>Skills</h4>
+                        <div className="col s12">
+                            {getSkills("Areas of Expertise", "essentials", "indigo lighten-4", basicSkills)}
+                            {getSkills("Technical", "technical", "blue lighten-3", basicSkills)}
+                            {getSkills("Frameworks & Libraries", "framework", "lime", basicSkills)}
+                            {getSkills("Database", "database", "yellow", basicSkills)}
+                            {getSkills("Content Mangement Systems", "cms", "orange lighten-2", basicSkills)}
+                            {getSkills("Operating Systems", "os", "red lighten-2", basicSkills)}
+                            {getSkills("Tools", "tool", "purple lighten-4", basicSkills)}
+                            {getSkills("Design", "design", "purple lighten-3", basicSkills)}
+                        </div>
                     </div>
                 </div>
             </div>

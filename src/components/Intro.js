@@ -13,7 +13,7 @@ class Intro extends React.Component{
         const designation= "Web Developer";
         const phone= "0123456789";
         const email= "john@email.com";
-        const address= "Evergreen terrace";
+        const address= "14 N Moore St, New York, NY 10013, United States";
         const github= "github link";
         const linkedin= "linkedin link";
         const image= "https://previews.123rf.com/images/eugenesergeev/eugenesergeev1605/eugenesergeev160500180/56871195-bearded-man-smoking-cigar-outdoor-square-portrait-with-selective-focus.jpg";
@@ -45,7 +45,7 @@ class Intro extends React.Component{
                                 <span className="col s12 contact-details">
                                     <div className="col xl6 l6 m6 s6 phone">
                                         <a href="option.link" target="_blank" >
-                                        <FontAwesomeIcon icon={['fas', 'phone']} /> <span className="hide-on-small-only">{phone}</span><span className="hide-on-med-and-up">Call me</span>
+                                            <FontAwesomeIcon icon={['fas', 'phone']} /> <span className="hide-on-small-only">{phone}</span><span className="hide-on-med-and-up">Call me</span>
                                         </a>
                                     </div>
                                     <div className="col xl6 l6 m6 s6 email">
@@ -54,25 +54,27 @@ class Intro extends React.Component{
                                         </a>
                                     </div>
                                     <span className="col xl6 l6 m6 s6 github">
-                                        <a href="option.link" target="_blank" >
-                                        <FontAwesomeIcon icon={['fab', 'github']} /> <span>{github}</span><span className="hide-on-med-and-up">github</span>
+                                        <a href={github} target="_blank" >
+                                            <FontAwesomeIcon icon={['fab', 'github']} /> <span className="hide-on-small-only">{github}</span><span className="hide-on-med-and-up">Github</span>
                                         </a>
                                     </span>
                                     <div className="col xl6 l6 m6 s6 linkedin">
-                                        <a href="option.link" target="_blank" >
-                                        <FontAwesomeIcon icon={['fab', 'linkedin']} /> <span>{linkedin}</span><span className="hide-on-med-and-up">linkedin</span>
+                                        <a href={linkedin} target="_blank" >
+                                            <FontAwesomeIcon icon={['fab', 'linkedin']} /> <span className="hide-on-small-only">{linkedin}</span><span className="hide-on-med-and-up">Linkedin</span>
                                         </a>
                                     </div>
                                     <div className="col xl12 l12 m12 s12 address">
                                         <a href="/">          
-                                            icon <span>{address}</span><span className="hide-on-med-and-up">adress</span>
+                                            <FontAwesomeIcon icon={['fas', 'map-marker-alt']} /> <span>{address}</span>
                                         </a>
                                     </div>
                                 </span>
                             </span>
                         </div>
                         <div className="row">
-                            <div className="col xl12 l12 m12 s12 desc">{desc}</div>
+                            <div className="col xl12 l12 m12 s12 desc">
+                                <p>{desc}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

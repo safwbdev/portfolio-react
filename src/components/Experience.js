@@ -83,10 +83,12 @@ class Experience extends React.Component{
         ];
 
         return(
-            <div className="container work-section">
-                <div className="row">
-                    <h4>Work Experience</h4>
-                    {getExperience(experienceList)}
+            <div className="work-section">
+                <div className="container">
+                    <div className="row">
+                        <h4>Work Experience</h4>
+                        {getExperience(experienceList)}
+                    </div>
                 </div>
             </div>
         )
@@ -96,7 +98,7 @@ class Experience extends React.Component{
                     {array.map(function(item, key){
                         return <div className="work row col xl12 l12 m12 s12" key={ key }>
                                     <div>
-                                        <span className="position"  >{item.role}</span> | <span className="duration">{item.startDate} - {item.endDate}</span>
+                                        <span className="position">{item.role}</span> | <span className="duration">{item.startDate} - {item.endDate}</span>
                                     </div>
                                     <div>
                                         <span className="company">{item.company}</span> | <span className="location">{item.location}</span>
