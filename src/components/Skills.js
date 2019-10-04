@@ -4,17 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class Skills extends React.Component{
 
     render(){
-        function getSkills(title, skillType, color, array) {
-            return  <div className="row">
-                        <h6>{title}</h6>
-                        <div>
-                            {array.map(function(item, key){
-                                if(item.type === skillType)
-                                return <span className={color + " chip"}  key={ key }><FontAwesomeIcon icon={[item.icon[0], item.icon[1]]} />&nbsp;&nbsp;{item.name}</span>;
-                            })}
-                        </div>
-                    </div>
-        }
         const basicSkills =[
             {position_id:1, name:"AJAX", icon:["fas","code"], type:"essentials"},
             {position_id:1, name:"Agile software development", icon:["fas","code"], type:"essentials"},
@@ -92,7 +81,7 @@ class Skills extends React.Component{
             {position_id:1, name:"Figma", icon:["fab","figma"], type:"design"},
             {position_id:1, name:"Photoshop", icon:["fab","adobe"], type:"design"},
         ];
-        return(  
+        return(
             <div className="container skills-section">
                 <div className="row">
                     <h4>Skills</h4>
@@ -109,6 +98,18 @@ class Skills extends React.Component{
                 </div>
             </div>
         );
+
+        function getSkills(title, skillType, color, array) {
+            return  <div className="row">
+                        <h6>{title}</h6>
+                        <div>
+                            {array.map(function(item, key){
+                                if(item.type === skillType)
+                                return <span className={color + " chip"}  key={ key }><FontAwesomeIcon icon={[item.icon[0], item.icon[1]]} />&nbsp;&nbsp;{item.name}</span>;
+                            })}
+                        </div>
+                    </div>
+        }
     }
 };         
 export default Skills
