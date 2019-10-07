@@ -1,28 +1,28 @@
 import React from 'react';
+import { db } from "../firebase";
+import Moment from 'react-moment';
 
 class Education extends React.Component{
 
+    constructor(){
+        super();
+        this.state = {
+            education:[]
+        }
+    }
+    componentDidMount() {
+        db.collection("education")
+        .get()
+        .then(querySnapshot => {
+            const data = querySnapshot.docs.map(doc => doc.data());
+            this.setState({ 
+                education: this.state.education.concat(data) 
+            })                
+        });
+    }
+    
     render(){
-        const educationList =[
-            {
-                gradDate:"2013",
-                level:"Masters of Technology (Internet & Web Computing)",
-                intitute:"RMIT (Royal Melbourne Institute of Technology)",
-                location:"Melbourne, Australia"
-            },
-            {
-                gradDate:"2009",
-                level:"Multimedia Systems",
-                intitute:"Lancaster University (Twinning with Sunway University)",
-                location:"Kuala Lumpur, Malaysia"
-            },
-            {
-                gradDate:"2007",
-                level:"Diploma in Interactive Media",
-                intitute:"Sunway University",
-                location:"Kuala Lumpur, Malaysia"
-            },
-        ];
+        const educationList = this.state.education;
 
         return(
             <div className="school-section">
@@ -40,10 +40,12 @@ class Education extends React.Component{
                     {array.map(function(item, key){
                         return <div className="school row col xl12 l12 m12 s12" key={ key }>
                                     <div>
-                                        <span className="grad-year">{item.gradDate}</span> | <span className="field">{item.level}</span>
+                                        <span className="grad-year">
+                                            <Moment format="YYYY">{item.edu_end}</Moment>
+                                        </span> | <span className="field">{item.edu_field}</span>
                                     </div>
                                     <div>
-                                        <span className="name">{item.intitute}</span> | <span className="location">{item.location}</span>
+                                        <span className="name">{item.edu_name}</span> | <span className="location">{item.edu_location}</span>
                                     </div>
                                 </div>;
                     })}
