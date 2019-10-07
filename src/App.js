@@ -21,8 +21,7 @@ class App extends React.Component {
     return (
       <div>
         {/* <Navbar /> */}
-            <Intro
-            />
+            <Intro />
             <Projects  />
             <Skills  />
             <Experience  />
