@@ -1,5 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Slider from "react-slick";
+
 
 class Projects extends React.Component{
 
@@ -12,18 +14,18 @@ class Projects extends React.Component{
             </ul>
         }
         function getProjects(array, projectType) {
-            return  <div >
+            return  <Slider {...settings}>
                         {array.map(function(item, key){
-                            if(item.type === projectType)
-                                return <div class="project row col xl6 l6 m6 s12">
+                            if(item.type === projectType){
+                                return <div className="project row col xl6 l6 m6 s12" key={ key }>
                                             <h6>{item.name}</h6> 
-                                            <p class="desc">{item.desc}</p>
+                                            <p className="desc">{item.desc}</p>
                                             {getTools(item.tools)}
-                                            <div class="links">
+                                            <div className="links">
                                                 { item.demoURL !== null
                                                 ? <span>
-                                                    <a href={item.demoURL} target="_blank">
-                                                        <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.type == "client" ? <span>Visit Site</span> : <span>Demo</span>}
+                                                    <a href={item.demoURL} target="_blank" rel="noopener noreferrer">
+                                                        <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.type === "client" ? <span>Visit Site</span> : <span>Demo</span>}
                                                     </a>
                                                 </span>
                                                 : ""
@@ -34,7 +36,7 @@ class Projects extends React.Component{
                                                 }
                                                 { item.githubURL !== null
                                                 ? <span>
-                                                    <a href={item.githubURL} target="_blank">
+                                                    <a href={item.githubURL} target="_blank" rel="noopener noreferrer">
                                                         <FontAwesomeIcon icon={['fab', 'github']} /> Github
                                                     </a>
                                                 </span>
@@ -42,10 +44,14 @@ class Projects extends React.Component{
                                                 }
                                             </div>
                                         </div>;
+                        }
+                        else{
+                            return null;
+                        }
                                     }
                                 )
                         }
-                    </div>
+                    </Slider>
         }
 
         const projectList =[
@@ -106,8 +112,36 @@ class Projects extends React.Component{
                     type:"personal"
                 },
         ];
+
+        var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          };
         return(
             <div className="project-section">
+                {/* <Slider {...settings}>
+        <div>
+          <h3>1</h3>
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+      </Slider> */}
                 <div className="container">
                     <div className="row">
                         <h4>Portfolio</h4>
@@ -115,14 +149,14 @@ class Projects extends React.Component{
                             <h5>Client Projects<sup>*</sup></h5>
                             {getProjects(projectList, "client")}
                             <div className="col s12">
-                                <span class="tnc">* Projects shown are displayed with persmission from the original owners</span>
+                                <span className="tnc">* Projects shown are displayed with persmission from the original owners</span>
                             </div>
                         </div>
                         <div className="col s12">
                             <h5>Personal Projects<sup>**</sup></h5>
                             {getProjects(projectList, "personal")}
                             <div className="col s12">
-                                <span class="tnc">** Just stuff I do for fun!</span>
+                                <span className="tnc">** Just stuff I do for fun!</span>
                             </div>
                         </div>
                     </div>

@@ -105,12 +105,11 @@ class Skills extends React.Component{
         function getSkills(title, skillType, color, array) {
             return  <div className="row">
                         <h6>{title}</h6>
-                        <div>
                             {array.map(function(item, key){
-                                if(item.type === skillType)
-                                return <span className={color + " chip"}  key={ key }><FontAwesomeIcon icon={[item.icon[0], item.icon[1]]} />&nbsp;&nbsp;{item.name}</span>;
+                                if(item.type === skillType){
+                                    return <span className={color + " chip"}  key={ key }><FontAwesomeIcon icon={[item.icon[0], item.icon[1]]} />&nbsp;&nbsp;{item.name}</span>;
+                                }
                             })}
-                        </div>
                     </div>
         }
     }

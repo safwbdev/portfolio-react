@@ -38,12 +38,12 @@ class Education extends React.Component{
         function getEducation(array) {
             return  <div >
                     {array.map(function(item, key){
-                        return <div class="school row col xl12 l12 m12 s12" key={ key }>
+                        return <div className="school row col xl12 l12 m12 s12" key={ key }>
                                     <div>
-                                        <span class="grad-year">{item.gradDate}</span> | <span class="field">{item.level}</span>
+                                        <span className="grad-year">{item.gradDate}</span> | <span className="field">{item.level}</span>
                                     </div>
                                     <div>
-                                        <span class="name">{item.intitute}</span> | <span class="location">{item.location}</span>
+                                        <span className="name">{item.intitute}</span> | <span className="location">{item.location}</span>
                                     </div>
                                 </div>;
                     })}
