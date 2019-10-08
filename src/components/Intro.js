@@ -67,12 +67,12 @@ class Intro extends React.Component{
                                 </div>
                                 <span className="col s12 contact-details">
                                     <div className="col xl6 l6 m6 s6 phone">
-                                        <a href="option.link" >
+                                        <a href={"tel:" + this.state.tel} >
                                             <FontAwesomeIcon icon={['fas', 'phone']} /> <span className="hide-on-small-only">{this.state.tel}</span><span className="hide-on-med-and-up">Call me</span>
                                         </a>
                                     </div>
                                     <div className="col xl6 l6 m6 s6 email">
-                                        <a href="option.link" >
+                                        <a href={"mailto:" + this.state.email} >
                                             <FontAwesomeIcon icon={['fas', 'envelope']} /> <span className="hide-on-small-only">{this.state.email}</span><span className="hide-on-med-and-up">Email me</span>
                                         </a>
                                     </div>
