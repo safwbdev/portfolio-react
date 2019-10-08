@@ -35,8 +35,8 @@ class Projects extends React.Component{
             </ul>
         }
         function getProjects(array, projectType) {
-            return  <div>
-            {/* return  <div {...settings}> */}
+            // return  <di>
+                return  <Slider {...settings}>
                         {array.map(function(item, key){
                             if(item.project_type === projectType){
                                 return <div className="project row col xl6 l6 m6 s12" key={ key }>
@@ -44,21 +44,21 @@ class Projects extends React.Component{
                                             <p className="desc">{item.project_desc}</p>
                                             {getTools(item.project_tools)}
                                             <div className="links">
-                                                { item.demoURL !== null
+                                                { item.demoUrl !== null
                                                 ? <span>
-                                                    <a href={item.demoURL} target="_blank" rel="noopener noreferrer">
+                                                    <a href={item.demoUrl} target="_blank" rel="noopener noreferrer">
                                                         <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.project_type === "client" ? <span>Visit Site</span> : <span>Demo</span>}
                                                     </a>
                                                 </span>
                                                 : ""
                                                 }
-                                                 { item.demoURL !== null && item.githubURL !== null
-                                                ? " | "
+                                                 { item.demoUrl !== null && item.githubUrl !== null
+                                                ? <span className="hide-on-small-only"> | </span>
                                                 : ""
                                                 }
-                                                { item.githubURL !== null
+                                                { item.githubUrl !== null
                                                 ? <span>
-                                                    <a href={item.githubURL} target="_blank" rel="noopener noreferrer">
+                                                    <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
                                                         <FontAwesomeIcon icon={['fab', 'github']} /> Github
                                                     </a>
                                                 </span>
@@ -73,16 +73,38 @@ class Projects extends React.Component{
                                     }
                                 )
                         }
-                    </div>
-                    // </Slider>
+                    </Slider>
+                    {/* </di> */}
         }
 
         var settings = {
-            dots: true,
-            infinite: true,
+            dots: false,
+            infinite: false,
             speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '10%',
+                        arrows: true,
+                        dots: true,
+                  }
+                }
+
+              ]
           };
         return(
             <div className="project-section">
