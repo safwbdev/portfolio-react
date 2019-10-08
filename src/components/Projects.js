@@ -34,8 +34,8 @@ class Projects extends React.Component{
                     })}
             </ul>
         }
-        function getProjects(array, projectType) {
-                return  <Slider {...settings}>
+        function getProjects(array, projectType, getSettings) {
+                return  <Slider {...getSettings}>
                         {array.map(function(item, key){
                             if(item.project_type === projectType){
                                 return <div className="project row col xl6 l6 m6 s12" key={ key }>
@@ -46,7 +46,7 @@ class Projects extends React.Component{
                                                 { item.demoUrl !== null
                                                 ? <span>
                                                     <a href={item.demoUrl} target="_blank" rel="noopener noreferrer">
-                                                        <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.project_type === "client" ? <span>Visit Site</span> : <span>Demo</span>}
+                                                        <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.project_type === "Client" ? <span>Visit Site</span> : <span>Demo</span>}
                                                     </a>
                                                 </span>
                                                 : ""
@@ -75,7 +75,36 @@ class Projects extends React.Component{
                     </Slider>
         }
 
-        var settings = {
+        var clientSettings = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '10%',
+                        arrows: true,
+                        dots: true,
+                  }
+                }
+
+              ]
+          };
+          var personalSettings = {
             dots: false,
             infinite: false,
             speed: 500,
@@ -111,7 +140,7 @@ class Projects extends React.Component{
                         <h4>Portfolio</h4>
                         <div className="col s12">
                             <h5>Client Projects<sup>*</sup></h5>
-                            {getProjects(projectList, "Client")}
+                            {getProjects(projectList, "Client", clientSettings)}
                         </div>
                     </div>
                     <div className="row">
@@ -122,7 +151,7 @@ class Projects extends React.Component{
                     <div className="row">
                         <div className="col s12">
                             <h5>Personal Projects<sup>**</sup></h5>
-                            {getProjects(projectList, "Personal")}
+                            {getProjects(projectList, "Personal", personalSettings)}
                         </div>
                     </div>
                     <div className="row">
