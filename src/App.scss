@@ -80,10 +80,13 @@
           justify-content: center;
           text-align: center;
           line-height: 36px;
-          padding: 10px 16px;
+          padding: 10px;
           vertical-align: middle;
           -webkit-tap-highlight-color: transparent;
           background: #ffffff;
+          span{
+            font-size: 16px;
+          }
         }
       }
     }
@@ -224,7 +227,6 @@
   }
 }
 .school-section{
-  // background-image: linear-gradient(to top, #4facfe 0%, #ffffff 100%);
   .school{
     .grad-year{
       font-weight: bold;
@@ -248,10 +250,9 @@
 
 
 @media only screen and (max-width: 768px) {
-html, body{
-  overflow-x: hidden;
-}
-
+  html, body{
+    overflow-x: hidden;
+  }
   .project-section{
     .container{
       padding: 0;
@@ -267,6 +268,7 @@ html, body{
           .chip{
             font-size: 12px;
             font-weight: bold;
+            background: #ffffff;
             
           }
           .links{
@@ -287,13 +289,8 @@ html, body{
     }
   }
   .slick-initialized .slick-slide{
-    // border-radius: 5%;
-    // margin-right: 9px !important;
     border-right: 5px solid #ffffff;
-    // background: #eeeeee;
-    // background: #f7f7f7;
     background: #bbe0ff;
-    // background: #00f2fe;
     margin: 0 0px;
     height: inherit;
   }
