@@ -155,7 +155,7 @@
     font-size: 18px;
   }
   .project{
-    text-align: left;
+    text-align: center;
     h6{
       font-weight: bold;
       padding: 0;
@@ -178,6 +178,31 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .slick-slider{
+    &.personal{
+      .slick-slide{
+        border: 1px solid #e4e4e4;
+        float: left;
+        width: 30% !important;
+        height: 250px;
+        margin:  5px;
+        padding: 10px;
+        
+      }
+    }
+    &.client{
+      .slick-slide{
+        width: 48% !important;
+        float: left;
+        margin:  5px;
+        padding: 10px;
+        border: 1px solid #e4e4e4;
+
+      }
+    }
+  }
+}
 @media only screen and (max-width: 768px) {
   .project-section{
     .project{
@@ -277,7 +302,7 @@
               background: #4eacfe;
               color: #ffffff;
               padding: 10px;
-              margin: 0 5px;
+              margin: 0 5px 10px 5px;
               width: 45%;
               float: left;
               text-align: center;

@@ -34,11 +34,11 @@ class Projects extends React.Component{
                     })}
             </ul>
         }
-        function getProjects(array, projectType, getSettings) {
-                return  <Slider {...getSettings}>
+        function getProjects(array, projectType, getClass, getSettings) {
+                return  <Slider className={getClass} {...getSettings}>
                         {array.map(function(item, key){
                             if(item.project_type === projectType){
-                                return <div className="project row col xl6 l6 m6 s12" key={ key }>
+                                return <div className="project" key={ key }>
                                             <h6>{item.project_name}</h6> 
                                             <p className="desc">{item.project_desc}</p>
                                             {getTools(item.project_tools)}
@@ -108,7 +108,7 @@ class Projects extends React.Component{
             dots: false,
             infinite: false,
             speed: 500,
-            slidesToShow: 3,
+            slidesToShow:6,
             slidesToScroll: 1,
             arrows: true,
             responsive: [
@@ -140,7 +140,7 @@ class Projects extends React.Component{
                         <h4>Portfolio</h4>
                         <div className="col s12">
                             <h5>Client Projects<sup>*</sup></h5>
-                            {getProjects(projectList, "Client", clientSettings)}
+                            {getProjects(projectList, "Client", "client", clientSettings)}
                         </div>
                     </div>
                     <div className="row">
@@ -151,7 +151,7 @@ class Projects extends React.Component{
                     <div className="row">
                         <div className="col s12">
                             <h5>Personal Projects<sup>**</sup></h5>
-                            {getProjects(projectList, "Personal", personalSettings)}
+                            {getProjects(projectList, "Personal", "personal", personalSettings)}
                         </div>
                     </div>
                     <div className="row">
