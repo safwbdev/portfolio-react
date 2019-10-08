@@ -30,12 +30,11 @@ class Projects extends React.Component{
         function getTools(array) {
             return <ul>
                 {array.map(function(item, key){
-                        return <li className="chip">{item}</li> ;
+                        return <li className="chip" key={ key }>{item}</li> ;
                     })}
             </ul>
         }
         function getProjects(array, projectType) {
-            // return  <di>
                 return  <Slider {...settings}>
                         {array.map(function(item, key){
                             if(item.project_type === projectType){
@@ -74,7 +73,6 @@ class Projects extends React.Component{
                                 )
                         }
                     </Slider>
-                    {/* </di> */}
         }
 
         var settings = {
@@ -114,16 +112,22 @@ class Projects extends React.Component{
                         <div className="col s12">
                             <h5>Client Projects<sup>*</sup></h5>
                             {getProjects(projectList, "Client")}
-                            <div className="col s12">
-                                <span className="tnc">* Projects shown are displayed with persmission from the original owners</span>
-                            </div>
                         </div>
+                    </div>
+                    <div className="row">
+                        <div className="col s12">
+                            <span className="tnc">* Projects shown are displayed with persmission from the original owners</span>
+                        </div>
+                    </div>
+                    <div className="row">
                         <div className="col s12">
                             <h5>Personal Projects<sup>**</sup></h5>
                             {getProjects(projectList, "Personal")}
-                            <div className="col s12">
-                                <span className="tnc">** Just stuff I do for fun!</span>
-                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col s12">
+                            <span className="tnc">** Just stuff I do for fun!</span>
                         </div>
                     </div>
                 </div>

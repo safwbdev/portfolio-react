@@ -55,7 +55,7 @@ class Experience extends React.Component{
         function getDesc(array) {
             return <ul>
                 {array.map(function(item, key){
-                        return <li>{item}</li> ;
+                        return <li key={ key }>{item}</li> ;
                     })}
             </ul>
         }
