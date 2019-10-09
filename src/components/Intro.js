@@ -76,12 +76,11 @@ class Intro extends React.Component{
                                             <FontAwesomeIcon icon={['fab', 'linkedin']} /> <span className="hide-on-small-only">Check out my&nbsp;</span><span >Linkedin</span>
                                         </a>
                                     </div>
-                                    {/* <div className="col xl12 l12 m12 s12 address wow bounceIn" data-wow-duration="0.5s" 
-                                        data-wow-delay="1.7s">
+                                    <div className="col xl12 l12 m12 s12 address">
                                         <a href="/">          
                                             <FontAwesomeIcon icon={['fas', 'map-marker-alt']} /> <span>{this.state.address}</span>
                                         </a>
-                                    </div> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>

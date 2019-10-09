@@ -39,30 +39,34 @@ class Projects extends React.Component{
                         {array.map(function(item, key){
                             if(item.project_type === projectType){
                                 return <div className="project" key={ key }>
-                                            <h6>{item.project_name}</h6> 
-                                            <p className="desc">{item.project_desc}</p>
-                                            {getTools(item.project_tools)}
-                                            <div className="links">
-                                                { item.demoUrl !== null
-                                                ? <span>
-                                                    <a href={item.demoUrl} target="_blank" rel="noopener noreferrer">
-                                                        <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.project_type === "Client" ? <span>Visit Site</span> : <span>Demo</span>}
-                                                    </a>
-                                                </span>
-                                                : ""
-                                                }
-                                                 { item.demoUrl !== null && item.githubUrl !== null
-                                                ? <span className="hide-on-small-only"> | </span>
-                                                : ""
-                                                }
-                                                { item.githubUrl !== null
-                                                ? <span>
-                                                    <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
-                                                        <FontAwesomeIcon icon={['fab', 'github']} /> Github
-                                                    </a>
-                                                </span>
-                                                : ""
-                                                }
+                                    <img src="http://via.placeholder.com/640x360" />
+                                    <div className="col s12">
+                                        <h6>{item.project_name}</h6> 
+                                        <p className="desc">{item.project_desc}</p>
+                                        {getTools(item.project_tools)}
+                                        <div className="links">
+                                            { item.demoUrl !== null
+                                            ? <span>
+                                                <a href={item.demoUrl} target="_blank" rel="noopener noreferrer">
+                                                    <FontAwesomeIcon icon={['far', 'window-restore']} /> { item.project_type === "Client" ? <span>Visit Site</span> : <span>Demo</span>}
+                                                </a>
+                                            </span>
+                                            : ""
+                                            }
+                                                { item.demoUrl !== null && item.githubUrl !== null
+                                            ? <span className="hide-on-small-only"> | </span>
+                                            : ""
+                                            }
+                                            { item.githubUrl !== null
+                                            ? <span>
+                                                <a href={item.githubUrl} target="_blank" rel="noopener noreferrer">
+                                                    <FontAwesomeIcon icon={['fab', 'github']} /> Github
+                                                </a>
+                                            </span>
+                                            : ""
+                                            }
+
+                                    </div>
                                             </div>
                                         </div>;
                         }
@@ -136,24 +140,24 @@ class Projects extends React.Component{
         return(
             <div className="project-section">
                 <div className="container">
-                    <div className="col s12">
+                    <div className="col xl12 l12 m12 s12">
                         <h4>Portfolio</h4>
                     </div>
-                    <div className="row fadeIn">
-                        <div className="col s12">
+                    <div className="row">
+                        <div className="col xl12 l12 m12 s12">
                             <h5>Client Projects<sup>*</sup></h5>
                             {getProjects(projectList, "Client", "client", clientSettings)}
                         </div>
                     </div>
-                    <div className="col s12">
+                    <div className="col xl12 l12 m12 s12">
                         <span className="tnc">* Projects shown are displayed with persmission from the original owners</span>
                     </div>
                     <div className="row">
-                        <div className="col s12">
+                        <div className="col xl12 l12 m12 s12">
                             <h5>Personal Projects<sup>**</sup></h5>
                             {getProjects(projectList, "Personal", "personal", personalSettings)}
                         </div>
-                        <div className="col s12">
+                        <div className="col xl12 l12 m12 s12">
                             <span className="tnc">** Just stuff I do for fun!</span>
                         </div>
                     </div>
