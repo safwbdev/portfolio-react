@@ -19,6 +19,7 @@ class Skills extends React.Component{
     }
     componentDidMount() {
         db.collection("skills")
+        .orderBy('skill_name', 'asc')
         .get()
         .then(querySnapshot => {
             const data = querySnapshot.docs.map(doc => doc.data());
