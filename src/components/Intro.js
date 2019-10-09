@@ -1,6 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { db } from "../firebase";
+import profile_image from './../assets/profile.jpg';
+import desc_image from './../assets/desc_bg.jpeg';
 
 class Intro extends React.Component{
 
@@ -17,14 +19,12 @@ class Intro extends React.Component{
             desc: null,   
         }
     }
-    componentDidMount() {        
+    componentDidMount() {
         db.collection("personal")
         .get()
         .then(querySnapshot => {
             const data = querySnapshot.docs.map(doc => doc.data());
-                // console.log(data[0]);
                 this.setState({
-                    image:data[0].image,
                     fName:data[0].fullName,
                     designation: data[0].designation,
                     tel: data[0].tel,
@@ -36,15 +36,20 @@ class Intro extends React.Component{
                 })
         });
     }
+
+    
     
     render(){
+        var descbgStyle = {
+            backgroundImage: `url(${desc_image})`
+          };
         return (
             <div className="row">
                 <div className="col xl12 l12 m12 s12 intro-section">
                     <div className="container section">
                         <div className="row">
                             <div className="col xl3 l4 m12 s12 profile-pic">
-                                <img src={this.state.image} alt="" />
+                                <img src={profile_image} alt="" />
                             </div>
                             <div className="col xl9 l8 m12 s12">
                                 <div className="col s12 ">
@@ -93,7 +98,7 @@ class Intro extends React.Component{
                         </div> */}
                     </div>
                 </div>
-                <div className="col xl12 l12 m12 s12 desc-section">
+                <div className="col xl12 l12 m12 s12 desc-section" style={ descbgStyle }>
                     <div className="container section">
                         <div className="row">
                         <div className="col xl12 l12 m12 s12 desc " >
@@ -105,6 +110,7 @@ class Intro extends React.Component{
             </div>
         );
     }
+
 };
 
 export default Intro;
