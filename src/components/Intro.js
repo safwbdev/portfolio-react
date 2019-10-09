@@ -44,11 +44,14 @@ class Intro extends React.Component{
     render(){
         return (
             <div className="row">
-                <div className="col xl12 l12 m12 s12 intro-section">
+                <div className="col xl12 l12 m12 s12 intro-section wow slideInDown" 
+                    data-wow-duration="0.5s" 
+                    data-wow-delay="0s">
                     <div className="container section">
                         <div className="row">
                             <div className="col xl3 l4 m12 s12 profile-pic">
-                                <img src={this.state.image} alt="" className="wow bounceIn" />
+                                <img src={this.state.image} alt="" className="wow bounceIn" data-wow-duration="0.5s" 
+                    data-wow-delay="0.5s" />
                             </div>
                             <div className="col xl9 l8 m12 s12">
                                 <div className="col s12 ">
@@ -90,12 +93,12 @@ class Intro extends React.Component{
                                             <FontAwesomeIcon icon={['fab', 'linkedin']} /> <span className="hide-on-small-only">Check out my&nbsp;</span><span >Linkedin</span>
                                         </a>
                                     </div>
-                                    <div className="col xl12 l12 m12 s12 address wow bounceIn" data-wow-duration="0.5s" 
+                                    {/* <div className="col xl12 l12 m12 s12 address wow bounceIn" data-wow-duration="0.5s" 
                                         data-wow-delay="1.7s">
                                         <a href="/">          
                                             <FontAwesomeIcon icon={['fas', 'map-marker-alt']} /> <span>{this.state.address}</span>
                                         </a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -108,12 +111,11 @@ class Intro extends React.Component{
                         </div> */}
                     </div>
                 </div>
-                <div className="col xl12 l12 m12 s12 desc-section">
+                <div className="col xl12 l12 m12 s12 desc-section wow fadeIn" data-wow-duration="0.5s" 
+                                data-wow-delay="2s">
                     <div className="container section">
                         <div className="row">
-                        <div className="col xl12 l12 m12 s12 desc wow fadeIn" 
-                                data-wow-duration="0.5s" 
-                                data-wow-delay="2s">
+                        <div className="col xl12 l12 m12 s12 desc " >
                                 <p>{this.state.desc}</p>
                             </div>
                         </div>

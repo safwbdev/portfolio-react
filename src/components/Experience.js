@@ -11,6 +11,7 @@ class Experience extends React.Component{
     }
     componentDidMount() {
         db.collection("experience")
+        .orderBy('work_start', 'desc')
         .get()
         .then(querySnapshot => {
             const data = querySnapshot.docs.map(doc => doc.data());

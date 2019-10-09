@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Slider from "react-slick";
 import { db } from "../firebase";
+import WOW from "wowjs";
 
 
 class Projects extends React.Component{
@@ -13,6 +14,9 @@ class Projects extends React.Component{
         }
     }
     componentDidMount() {
+        const wow = new WOW.WOW();
+        wow.init();
+
         db.collection("projects")
         .get()
         .then(querySnapshot => {
@@ -136,25 +140,24 @@ class Projects extends React.Component{
         return(
             <div className="project-section">
                 <div className="container">
-                    <div className="row">
+                    <div className="col s12 wow fadeIn" data-wow-duration="0.5s" 
+                                data-wow-delay="2.5s">
                         <h4>Portfolio</h4>
+                    </div>
+                    <div className="row fadeIn">
                         <div className="col s12">
                             <h5>Client Projects<sup>*</sup></h5>
                             {getProjects(projectList, "Client", "client", clientSettings)}
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col s12">
-                            <span className="tnc">* Projects shown are displayed with persmission from the original owners</span>
-                        </div>
+                    <div className="col s12">
+                        <span className="tnc">* Projects shown are displayed with persmission from the original owners</span>
                     </div>
                     <div className="row">
                         <div className="col s12">
                             <h5>Personal Projects<sup>**</sup></h5>
                             {getProjects(projectList, "Personal", "personal", personalSettings)}
                         </div>
-                    </div>
-                    <div className="row">
                         <div className="col s12">
                             <span className="tnc">** Just stuff I do for fun!</span>
                         </div>

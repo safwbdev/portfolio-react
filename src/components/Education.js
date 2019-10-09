@@ -12,6 +12,7 @@ class Education extends React.Component{
     }
     componentDidMount() {
         db.collection("education")
+        .orderBy('edu_end', 'desc')
         .get()
         .then(querySnapshot => {
             const data = querySnapshot.docs.map(doc => doc.data());
