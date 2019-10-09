@@ -36,8 +36,6 @@ class Intro extends React.Component{
                 })
         });
     }
-
-    
     
     render(){
         var descbgStyle = {
