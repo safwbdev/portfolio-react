@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Slider from "react-slick";
 import { db } from "../firebase";
-import WOW from "wowjs";
 
 
 class Projects extends React.Component{
@@ -14,9 +13,6 @@ class Projects extends React.Component{
         }
     }
     componentDidMount() {
-        const wow = new WOW.WOW();
-        wow.init();
-
         db.collection("projects")
         .get()
         .then(querySnapshot => {
@@ -140,8 +136,7 @@ class Projects extends React.Component{
         return(
             <div className="project-section">
                 <div className="container">
-                    <div className="col s12 wow fadeIn" data-wow-duration="0.5s" 
-                                data-wow-delay="2.5s">
+                    <div className="col s12">
                         <h4>Portfolio</h4>
                     </div>
                     <div className="row fadeIn">
