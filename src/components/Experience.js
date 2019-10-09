@@ -39,11 +39,11 @@ class Experience extends React.Component{
             return  <div>
                         {array.map(function(item, key){
                             return <div className="work row col xl12 l12 m12 s12" key={ key }>
-                                        <div>
-                                            <span className="position">{item.work_position}</span> | <span className="duration"> <Moment format="MMMM YYYY">{item.work_start}</Moment> -  <Moment format="MMMM YYYY">{item.work_end}</Moment></span>
+                                        <div className="work-detail">
+                                            <span className="position">{item.work_position}</span><span className="hide-on-small-only"> | </span><br className="hide-on-large-only" /><span className="duration"> <Moment format="MMMM YYYY">{item.work_start}</Moment> -  <Moment format="MMMM YYYY">{item.work_end}</Moment></span>
                                         </div>
-                                        <div>
-                                            <span className="company">{item.work_name}</span> | <span className="location">{item.work_location}</span>
+                                        <div className="work-detail">
+                                            <span className="company">{item.work_name}</span><span className="hide-on-small-only"> | </span><br className="hide-on-large-only" /><span className="location">{item.work_location}</span>
                                         </div>
                                         <div className="desc">
                                             {getDesc(item.work_desc)}

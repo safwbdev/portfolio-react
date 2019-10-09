@@ -43,10 +43,10 @@ class Education extends React.Component{
                                     <div>
                                         <span className="grad-year">
                                             <Moment format="YYYY">{item.edu_end}</Moment>
-                                        </span> | <span className="field">{item.edu_field}</span>
+                                        </span><span className="hide-on-small-only"> | </span><br className="hide-on-large-only" /><span className="field">{item.edu_field}</span>
                                     </div>
                                     <div>
-                                        <span className="name">{item.edu_name}</span> | <span className="location">{item.edu_location}</span>
+                                        <span className="name">{item.edu_name}</span><span className="hide-on-small-only"> | </span><br className="hide-on-large-only" /><span className="location">{item.edu_location}</span>
                                     </div>
                                 </div>;
                     })}
