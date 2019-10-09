@@ -37,7 +37,7 @@ class Skills extends React.Component{
                     <div className="row">
                         <h4>Skills</h4>
                         <div className="col s12">
-                            {getSkills("Areas of Expertise", "Essentials", "indigo lighten-4", basicSkills)}
+                            {getSkills("Essentials", "Essentials", "indigo lighten-4", basicSkills)}
                             {getSkills("Technical", "Technical", "blue lighten-3", basicSkills)}
                             {getSkills("Frameworks & Libraries", "Framework", "lime", basicSkills)}
                             {getSkills("Database", "Database", "yellow", basicSkills)}

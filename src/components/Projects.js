@@ -86,7 +86,7 @@ class Projects extends React.Component{
                 {
                     breakpoint: 1200,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                     }
                 },
@@ -115,7 +115,7 @@ class Projects extends React.Component{
                 {
                     breakpoint: 1200,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 6,
                         slidesToScroll: 1
                     }
                 },

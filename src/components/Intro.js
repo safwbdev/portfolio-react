@@ -47,10 +47,10 @@ class Intro extends React.Component{
                 <div className="col xl12 l12 m12 s12 intro-section">
                     <div className="container section">
                         <div className="row">
-                            <div className="col xl3 l3 m12 s12 profile-pic">
+                            <div className="col xl3 l4 m12 s12 profile-pic">
                                 <img src={this.state.image} alt="" className="wow bounceIn" />
                             </div>
-                            <span className="col xl9 l9 m12 s12">
+                            <div className="col xl9 l8 m12 s12">
                                 <div className="col s12 ">
                                     <h1 
                                         className="wow bounceInDown" 
@@ -65,7 +65,7 @@ class Intro extends React.Component{
                                         {this.state.designation}
                                     </h3>
                                 </div>
-                                <span className="col s12 contact-details">
+                                <div className="col xl12 l12 m12 s12 contact-details">
                                     <div className="col xl6 l6 m6 s6 phone wow bounceIn" data-wow-duration="0.5s" 
                                         data-wow-delay="0.7s">
                                         <a href={"tel:" + this.state.tel} >
@@ -78,12 +78,12 @@ class Intro extends React.Component{
                                             <FontAwesomeIcon icon={['fas', 'envelope']} /> <span className="hide-on-small-only">{this.state.email}</span><span className="hide-on-med-and-up">Email me</span>
                                         </a>
                                     </div>
-                                    <span className="col xl6 l6 m6 s6 github wow bounceIn" data-wow-duration="0.5s" 
+                                    <div className="col xl6 l6 m6 s6 github wow bounceIn" data-wow-duration="0.5s" 
                                         data-wow-delay="1.2s">
                                         <a href={this.state.github} target="_blank" rel="noopener noreferrer" >
                                             <FontAwesomeIcon icon={['fab', 'github']} /> <span className="hide-on-small-only">See my&nbsp;</span><span>Github</span>
                                         </a>
-                                    </span>
+                                    </div>
                                     <div className="col xl6 l6 m6 s6 linkedin wow bounceIn" data-wow-duration="0.5s" 
                                         data-wow-delay="1.5s">
                                         <a href={this.state.linkedin} target="_blank" rel="noopener noreferrer" >
@@ -96,8 +96,8 @@ class Intro extends React.Component{
                                             <FontAwesomeIcon icon={['fas', 'map-marker-alt']} /> <span>{this.state.address}</span>
                                         </a>
                                     </div>
-                                </span>
-                            </span>
+                                </div>
+                            </div>
                         </div>
                         <div className="row">
                             <div className="col xl12 l12 m12 s12 desc wow fadeIn" 
