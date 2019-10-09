@@ -1,7 +1,6 @@
 .intro-section{
   background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
-  padding: 0;
-
+  padding: 0;;
   h1{
     margin-bottom: 5px;
     font-weight: bold;
@@ -42,6 +41,25 @@
     text-align: center;
     p{
       font-size: 18px;
+    }
+  }
+}
+.desc-section{
+  background-image: url("https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  padding: 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .desc {
+    padding: 20px 0;
+    text-align: center;
+    p{
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: bold;
+      text-shadow: 11px 1px 6px #000000;
     }
   }
 }
