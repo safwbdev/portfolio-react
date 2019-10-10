@@ -6,6 +6,7 @@ import proj_1 from './../assets/proj_1.png';
 import proj_2 from './../assets/proj_2.png';
 import proj_3 from './../assets/proj_3.png';
 import proj_4 from './../assets/proj_4.png';
+import proj_5 from './../assets/proj_5.png';
 
 
 class Projects extends React.Component{
@@ -46,10 +47,12 @@ class Projects extends React.Component{
                     return proj_1;
                 case 9:
                     return proj_2;
+                case 10:
+                    return proj_5;
                 case 12:
                     return proj_4;
                 default:
-                  return 'http://via.placeholder.com/640x360';
+                  return 'http://via.placeholder.com/797x400';
               }
         }
         function getProjects(array, projectType, getClass, getSettings) {
