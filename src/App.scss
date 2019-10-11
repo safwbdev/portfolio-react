@@ -75,9 +75,12 @@
   .intro-section{
     height: 100vh;
     width: 100vw;
-    // padding: 0 !important;
-    // display:flex;
-    // align-items: center;
+
+    .profile-row{
+      height: 60vh;
+      display: flex;
+      align-items: center;
+    }
   }
   .desc-section{
     position: absolute;
@@ -109,6 +112,10 @@
   .intro-section{
     background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
     padding: 0;
+
+    .profile-row{
+      display: block;
+    }
   
     h1{
       font-size: 3.0em;

@@ -44,8 +44,8 @@ class Intro extends React.Component{
         return (
             <div className="row">
                 <div className="col xl12 l12 m12 s12 intro-section">
-                    <div className="container section">
-                        <div className="row">
+                    <div className="container">
+                        <div className="row profile-row">
                             <div className="col xl3 l4 m12 s12 profile-pic">
                                 <img src={profile_image} alt="" />
                             </div>
