@@ -121,6 +121,17 @@ class Projects extends React.Component{
                 {
                     breakpoint: 768,
                     settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerMode: false,
+                        centerPadding: '10%',
+                        arrows: true,
+                        dots: true,
+                  }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         centerMode: true,
@@ -150,6 +161,20 @@ class Projects extends React.Component{
                 {
                     breakpoint: 768,
                     settings: {
+                        infinite: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '10%',
+                        variableWidth: true,
+                        arrows: true,
+                        dots: true,
+                  }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        infinite: false,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         centerMode: true,
@@ -168,7 +193,7 @@ class Projects extends React.Component{
                         <h4>Portfolio</h4>
                     </div>
                     <div className="row">
-                        <div className="col xl12 l12 m12 s12">
+                        <div className="col xl12 l12 m12 s12 slider-row">
                             <h5>Client Projects<sup>*</sup></h5>
                             {getProjects(projectList, "Client", "client", clientSettings)}
                         </div>
@@ -177,7 +202,7 @@ class Projects extends React.Component{
                         <span className="tnc">* Projects shown are displayed with persmission from the original owners</span>
                     </div>
                     <div className="row">
-                        <div className="col xl12 l12 m12 s12">
+                        <div className="col xl12 l12 m12 s12 slider-row">
                             <h5>Personal Projects<sup>**</sup></h5>
                             {getProjects(projectList, "Personal", "personal", personalSettings)}
                         </div>

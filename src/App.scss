@@ -282,6 +282,19 @@
     font-weight: bold;
     text-align: center;  
   }
+  .slick-slide{
+    width: 100% !important;
+    float: left;
+
+    @media only screen and (max-width: 767px) {
+      padding: 15px;
+      // display: flex;
+      // align-items: center;
+      .desc{
+        display: none;
+      }
+    }
+  }
   .work{
     padding: 0;
     margin: 0;
@@ -312,29 +325,85 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .work{
-    .work-detail{
-      text-align: center;
-      .position{
-        font-size: 20px !important;
+  .work-section{
+    .container{
+      padding: 0;
+      width: 100%;
+      .slider-row{
+        padding: 0 0 0 10px;
       }
-      .duration{
-        font-size: 18px !important;
+      .work{
+        .work-detail{
+          text-align: left;
+          .position{
+            font-size: 20px !important;
+          }
+          .duration{
+            font-size: 18px !important;
+          }
+          .company{
+            font-size: 20px;
+          }    
+        }
+        .desc{
+          font-size: 17px !important;
+        }
       }
-      .company{
-        font-size: 20px;
-      }    
     }
-      .desc{
-        font-size: 17px !important;
-      }
   }
 }
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .work-section{
+      .container{
+        .slider-row{
+          padding: 0;
+          .slick-track{
+            display: block;
+            .slick-slide{
+              width: 100% !important;
+              float: left;
+              border: 0;
+              background:unset;
+            }
+          }
+        }
+      }
+    }
+    .school-section{
+      .container{
+        .slider-row{
+          padding: 0;
+          .slick-track{
+            display: block;
+            .slick-slide{
+              width: 100% !important;
+              float: left;
+              border: 0;
+              background:unset;
+            }
+          }
+        }
+      }
+    }
+  }
 .school-section{
   h4{
     font-size: 2.5em;
     font-weight: bold;
     text-align: center;
+  }
+  .slick-slide{
+    width: 100% !important;
+    float: left;
+    @media only screen and (max-width: 767px) {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+    }
   }
   .school{
     padding: 0;
@@ -357,8 +426,15 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .school-section{
+    .container{
+      padding: 0;
+      width: 100%;
+      .slider-row{
+        padding: 0 0 0 10px;
+      }
   .school{
-      text-align: center;
+      text-align: left;
       .grad-year{
         font-size: 20px !important;
       }
@@ -371,6 +447,8 @@
       .location{
         font-size: 17px !important;
       }
+    }
+  }
   }
 }
 
@@ -383,6 +461,9 @@
     .container{
       padding: 0;
       width: 100%;
+      .slider-row{
+        padding: 0 0 0 10px;
+      }
       .project{
         padding: 0;
         text-align: left;
@@ -417,7 +498,7 @@
     height: inherit;
   }
   .slick-slider .slick-list{
-    padding: 0 15px !important;
+    padding: 0 !important;
   }
   .slick-track{
     display: flex;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { db } from "../firebase";
 import Moment from 'react-moment';
+import Slider from "react-slick";
 
 class Education extends React.Component{
 
@@ -25,19 +26,61 @@ class Education extends React.Component{
     render(){
         const educationList = this.state.education;
 
+        var settings = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: true,
+                  }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        infinite: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '10%',
+                        arrows: true,
+                        dots: true,
+                  }
+                }
+
+              ]
+          };
+
         return(
             <div className="school-section">
                 <div className="container">
                     <div className="row">
                             <h4>Education</h4>
+                        <div className="col xl12 l12 m12 s12 slider-row">
                             {getEducation(educationList)}
                         </div>
                     </div>
                 </div>
+            </div>
         );
 
         function getEducation(array) {
-            return  <div >
+            return  <Slider {...settings}>
                     {array.map(function(item, key){
                         return <div className="school row col xl12 l12 m12 s12" key={ key }>
                                     <div>
@@ -50,7 +93,7 @@ class Education extends React.Component{
                                     </div>
                                 </div>;
                     })}
-            </div>
+            </Slider>
         }
     }
 };       
