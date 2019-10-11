@@ -86,25 +86,30 @@ class Intro extends React.Component{
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        {/* <div className="row">
-                            <div className="col xl12 l12 m12 s12 desc wow fadeIn" 
-                                data-wow-duration="0.5s" 
-                                data-wow-delay="2s">
+                            {/* <div className="col xl12 l12 m12 s12 desc " >
                                 <p>{this.state.desc}</p>
+                            </div> */}
+                        </div>
+                    </div>
+                    <div className="col xl12 l12 m12 s12 desc-section" style={ descbgStyle }>
+                        <div className="container section">
+                            <div className="row">
+                                <div className="col xl12 l12 m12 s12 desc " >
+                                    <p>{this.state.desc}</p>
+                                </div>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
-                <div className="col xl12 l12 m12 s12 desc-section" style={ descbgStyle }>
+                {/* <div className="col xl12 l12 m12 s12 desc-section" style={ descbgStyle }>
                     <div className="container section">
                         <div className="row">
-                        <div className="col xl12 l12 m12 s12 desc " >
+                            <div className="col xl12 l12 m12 s12 desc " >
                                 <p>{this.state.desc}</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         );
     }
