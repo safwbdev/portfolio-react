@@ -2,6 +2,10 @@ import React from 'react';
 import { db } from "../firebase";
 import Moment from 'react-moment';
 import Slider from "react-slick";
+import work_2 from './../assets/work_2.jpeg';
+import work_3 from './../assets/work_3.png';
+import work_4 from './../assets/work_4.png';
+import work_5 from './../assets/work_5.png';
 
 class Experience extends React.Component{
     constructor(){
@@ -113,7 +117,14 @@ class Experience extends React.Component{
             switch(id) {
                 case 1:
                     return 'http://via.placeholder.com/400x400';
-                
+                case 2:
+                    return work_2;
+                case 3:
+                    return work_3;
+                case 4:
+                    return work_4;
+                case 5:
+                    return work_5;
                 default:
                   return 'http://via.placeholder.com/400x400';
               }
