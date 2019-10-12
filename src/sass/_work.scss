@@ -1,0 +1,219 @@
+// .work-section{
+//     margin-bottom: 50px;
+//   h4{
+//     font-size: 2.5em;
+//     font-weight: bold;
+//     text-align: center;  
+//   }
+//   .slick-track{
+//     width: 100% !important;
+//     .slick-slide{
+//       width: 100% !important;
+//       float: left;
+//       .work{
+//         padding: 0;
+//         .logo{
+//           img{
+//             width:100%;
+//         }
+        // .position{
+        //   font-weight: bold;
+        //   font-size: 17px;
+        // }
+        // .duration{
+        //   font-size: 16px;
+        // }
+        // .company{
+        //   font-weight: bold;
+        // }
+        // .location{
+        //   font-size: 16px;
+        //   font-style: italic;
+        // }
+        // .desc{
+        //   ul{
+        //     list-style-type: initial;
+        //     margin: 10px 0 25px 30px;
+        //     li{
+        //       list-style-type: initial;
+        //     }
+        //   }
+        // }
+//       }
+//     }
+  
+//       // @media only screen and (max-width: 767px) {
+//       //   padding: 15px;
+//       //   .desc{
+//       //     display: none;
+//       //   }
+//       // }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 767px) {
+//   .work-section{
+//     margin-bottom: 50px;
+//     h4{
+//       font-size: 2.5em;
+//       font-weight: bold;
+//       text-align: center;  
+//     }
+//     .slick-track{
+//       // width: unset !important;
+//       .slick-slide{
+//         width: 100% !important;
+//         float: left;
+//         padding: 15px;
+//         .work{
+//           padding: 0;
+//           .logo{
+//             img{
+//               width:100%;
+//           }
+//           .position{
+//             font-weight: bold;
+//             font-size: 17px;
+//           }
+//           .duration{
+//             font-size: 16px;
+//           }
+//           .company{
+//             font-weight: bold;
+//           }
+//           .location{
+//             font-size: 16px;
+//             font-style: italic;
+//           }
+//           .desc{
+//             display: none;
+//             ul{
+//               list-style-type: initial;
+//               margin: 10px 0 25px 30px;
+//               li{
+//                 list-style-type: initial;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       }
+//     }
+//   }
+// }
+.work-section{
+  h4{
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .slick-track{
+    width: 100%;
+  }
+  .slick-slide{
+    width: 100% !important;
+    float: left;
+    @media only screen and (max-width: 767px) {
+      padding: 15px;
+    }
+  }
+  .work{
+    padding: 0;
+
+    .logo{
+      img{
+        width: 100%;
+      }
+    }
+    .position{
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .duration{
+      font-size: 16px;
+    }
+    .company{
+      font-weight: bold;
+    }
+    .location{
+      font-size: 16px;
+      font-style: italic;
+    }
+    .desc{
+      ul{
+        list-style-type: initial;
+        margin: 10px 0 25px 30px;
+        li{
+          list-style-type: initial;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .work-section{
+    .container{
+      padding: 0;
+      width: 100%;
+      .slider-row{
+        padding: 0 0 0 10px;
+        .slick-slider {
+          .slick-list{
+            padding: 0 !important;
+            .slick-track{
+              display: flex;
+            }
+          }
+          &.slick-initialized {
+            .slick-slide{
+              border-right: 5px solid #ffffff;
+              background: #bbe0ff;
+              margin: 0 0px;
+              padding: 15px 0;
+              height: inherit;
+              .work{
+                padding: 0;
+                text-align: center;
+                .logo{
+                  text-align: center;
+                  float: left;
+                  img{
+                  width: 50%;
+                  display: initial;
+                  }
+                }
+                .desc{
+                  text-align: left;;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .work-section{
+      .container{
+        .slider-row{
+          padding: 0;
+          .slick-track{
+            display: block;
+            .slick-slide{
+              width: 100% !important;
+              float: left;
+              border: 0;
+              background:unset;
+            }
+          }
+        }
+      }
+    }
+  }

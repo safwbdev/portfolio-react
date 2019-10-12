@@ -83,14 +83,19 @@ class Experience extends React.Component{
             return   <Slider {...settings}>
                         {array.map(function(item, key){
                             return <div className="work row col xl12 l12 m12 s12" key={ key }>
-                                        <div className="work-detail">
-                                            <span className="position">{item.work_position}</span><span className="hide-on-small-only"> | </span><br className="hide-on-med-and-up" /><span className="duration"> <Moment format="MMMM YYYY">{item.work_start}</Moment> -  <Moment format="MMMM YYYY">{item.work_end}</Moment></span>
+                                        <div className="col xl1 l1 m2 s12 logo">
+                                            <img src={getLogo(item.work_id)} className="circle" alt="" />
                                         </div>
-                                        <div className="work-detail">
-                                            <span className="company">{item.work_name}</span><span className="hide-on-small-only"> | </span><br className="hide-on-med-and-up" /><span className="location">{item.work_location}</span>
-                                        </div>
-                                        <div className="desc">
-                                            {getDesc(item.work_desc)}
+                                        <div className="col xl11 l11 m10 s12">
+                                            <div className="work-detail">
+                                                <span className="position">{item.work_position}</span><span className="hide-on-small-only"> | </span><br className="hide-on-med-and-up" /><span className="duration"> <Moment format="MMMM YYYY">{item.work_start}</Moment> -  <Moment format="MMMM YYYY">{item.work_end}</Moment></span>
+                                            </div>
+                                            <div className="work-detail">
+                                                <span className="company">{item.work_name}</span><span className="hide-on-small-only"> | </span><br className="hide-on-med-and-up" /><span className="location">{item.work_location}</span>
+                                            </div>
+                                            <div className="desc">
+                                                {getDesc(item.work_desc)}
+                                            </div>
                                         </div>
                                     </div>;
                         })}
@@ -103,6 +108,15 @@ class Experience extends React.Component{
                         return <li key={ key }>{item}</li> ;
                     })}
             </ul>
+        }
+        function getLogo(id){
+            switch(id) {
+                case 1:
+                    return 'http://via.placeholder.com/400x400';
+                
+                default:
+                  return 'http://via.placeholder.com/400x400';
+              }
         }
     }
 };

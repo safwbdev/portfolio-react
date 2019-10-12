@@ -63,7 +63,7 @@ class Projects extends React.Component{
                         {array.map(function(item, key){
                             if(item.project_type === projectType){
                                 return <div className="project" key={ key }>
-                                    <img src={getImage(item.project_id)} />
+                                    <img src={getImage(item.project_id)} alt="" />
                                     <div className="col s12">
                                         <h6>{item.project_name}</h6> 
                                         <p className="desc">{item.project_desc}</p>

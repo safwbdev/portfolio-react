@@ -1,0 +1,21 @@
+.skills-section{
+  text-align: center;
+  margin-bottom: 50px;
+  h4{
+    padding: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  h6{
+    padding: 20px 0 10px 0;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .chip {
+    color: #333333;
+    font-size: 14px;
+    svg{
+      font-size: 16px;
+    }
+  }
+}

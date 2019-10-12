@@ -61,6 +61,9 @@ class Skills extends React.Component{
                                                 <FontAwesomeIcon icon={[item.skill_icon[0], item.skill_icon[1]]} />&nbsp;&nbsp;{item.skill_name}
                                             </span>;
                                 }
+                                else{
+                                    return "";
+                                }
                             })}
                     </div>
         }

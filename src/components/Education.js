@@ -112,7 +112,7 @@ class Education extends React.Component{
                 case 3:
                     return rmit;
                 default:
-                  return 'http://via.placeholder.com/797x400';
+                  return 'http://via.placeholder.com/400x400';
               }
         }
     }
