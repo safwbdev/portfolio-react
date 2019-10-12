@@ -47,7 +47,7 @@ class Intro extends React.Component{
                     <div className="container">
                         <div className="row profile-row">
                             <div className="col xl3 l4 m12 s12 profile-pic">
-                                <img src={profile_image} alt="" />
+                                <img src={profile_image} className="circle" alt="" />
                             </div>
                             <div className="col xl9 l8 m12 s12">
                                 <div className="col s12 ">
