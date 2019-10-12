@@ -86,16 +86,18 @@ class Education extends React.Component{
             return  <Slider {...settings}>
                     {array.map(function(item, key){
                         return <div className="school row col xl12 l12 m12 s12" key={ key }>
-                                    <div className="col s12 logo hide-on-med-and-up">
+                                    <div className="col xl2 l1 m2 s12 logo">
                                         <img src={getLogo(item.edu_id)} className="circle" alt="" />
                                     </div>
+                                    <div className="col xl10 l11 m10 s12">
                                     <div>
                                         <span className="grad-year">
                                             <Moment format="YYYY">{item.edu_end}</Moment>
                                         </span><span className="hide-on-small-only"> | </span><br className="hide-on-large-only" /><span className="field">{item.edu_field}</span>
                                     </div>
                                     <div>
-                                        <span className="name">{item.edu_name}</span><span className="hide-on-small-only"> | </span><br className="hide-on-large-only" /><span className="location">{item.edu_location}</span>
+                                        <span className="name">{item.edu_name}</span><br /><span className="location">{item.edu_location}</span>
+                                    </div>
                                     </div>
                                 </div>;
                     })}
