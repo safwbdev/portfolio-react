@@ -2,13 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Slider from "react-slick";
 import { db } from "../firebase";
-import proj_1 from './../assets/proj_1.png';
-import proj_2 from './../assets/proj_2.png';
-import proj_3 from './../assets/proj_3.png';
-import proj_4 from './../assets/proj_4.png';
-import proj_5 from './../assets/proj_5.png';
-import proj_6 from './../assets/proj_6.png';
-
 
 class Projects extends React.Component{
 
@@ -40,30 +33,12 @@ class Projects extends React.Component{
                     })}
             </ul>
         }
-        function getImage(id){
-            switch(id) {
-                case 1:
-                    return proj_3;
-                case 8:
-                    return proj_1;
-                case 9:
-                    return proj_2;
-                case 10:
-                    return proj_5;
-                case 11:
-                    return proj_6;
-                case 12:
-                    return proj_4;
-                default:
-                  return 'http://via.placeholder.com/797x400';
-              }
-        }
         function getProjects(array, projectType, getClass, getSettings) {
                 return  <Slider className={getClass} {...getSettings}>
                         {array.map(function(item, key){
                             if(item.project_type === projectType){
                                 return <div className="project" key={ key }>
-                                    <img src={getImage(item.project_id)} alt="" />
+                                    <img src={ item.project_img !== null ? item.project_img : "http://via.placeholder.com/797x400"}alt="" />
                                     <div className="col s12">
                                         <h6>{item.project_name}</h6> 
                                         <p className="desc">{item.project_desc}</p>
