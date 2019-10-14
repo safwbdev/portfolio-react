@@ -1,6 +1,6 @@
 import React from 'react';
 import Intro from './components/Intro';
-import SkillSection from './components/SkillsSection/';
+import SkillSection from './components/SkillsSection';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
