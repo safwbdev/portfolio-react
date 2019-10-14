@@ -19,7 +19,7 @@ class IntroIndex extends React.Component{
             desc: null,
         }
     }
-    componentDidMount() {
+    componentDidMount(){
         db.collection("personal")
         .get()
         .then(querySnapshot => {
@@ -37,26 +37,23 @@ class IntroIndex extends React.Component{
                 })
         });
     }
-    
-    render(){
+
+    render() {
         return (
             <div className="row">
                 <div className="col xl12 l12 m12 s12 intro-section">
-                    <div className="container">
-                        <Profile
-                            image={this.state.image}
-                            fName={this.state.fName}
-                            designation={this.state.designation}
-                            tel={this.state.tel}
-                            email={this.state.email}
-                            github={this.state.github}
-                            address={this.state.address}
-                         />
-                    </div>
+                    <Profile 
+                        image={this.state.image}
+                        fName={this.state.fName}
+                        designation={this.state.designation}
+                        tel={this.state.tel}
+                        email={this.state.email}
+                        github={this.state.github}
+                        address={this.state.address} />
                     <Description desc={this.state.desc} />
                 </div>
             </div>
-        );
+        )
     }
 };
 
