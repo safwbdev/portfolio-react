@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { db } from "../firebase";
-import profile_image from './../assets/profile.jpg';
 import desc_image from './../assets/desc_bg.jpeg';
 
 class Intro extends React.Component{
@@ -16,7 +15,8 @@ class Intro extends React.Component{
             tel: null,
             github:null,
             linkedin:null,
-            desc: null,   
+            image:null,
+            desc: null,
         }
     }
     componentDidMount() {
@@ -32,6 +32,7 @@ class Intro extends React.Component{
                     address: data[0].address,
                     github: data[0].githubUrl,
                     linkedin: data[0].linkedinUrl,
+                    image: data[0].image,
                     desc: data[0].desc,
                 })
         });
@@ -47,7 +48,7 @@ class Intro extends React.Component{
                     <div className="container">
                         <div className="row profile-row">
                             <div className="col xl3 l4 m12 s12 profile-pic">
-                                <img src={profile_image} className="circle" alt="" />
+                                <img src={ this.state.image !== null ? this.state.image : "http://via.placeholder.com/500x400"} className="circle" alt="" />
                             </div>
                             <div className="col xl9 l8 m12 s12">
                                 <div className="col s12 ">
