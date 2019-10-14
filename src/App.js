@@ -1,9 +1,9 @@
 import React from 'react';
 import Intro from './components/Intro';
-import SkillSection from './components/SkillsSection';
-import Experience from './components/ExperienceSection';
-import Projects from './components/Projects';
-import Education from './components/EducationSection';
+import SkillSection from './components/SkillsSection/SkillsIndex';
+import Experience from './components/ExperienceSection/ExperienceIndex';
+import Projects from './components/ProjectSection/ProjectIndex';
+import Education from './components/EducationSection/EducationIndex';
 // import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { db } from "../../firebase";
 import Experience from './Experience';
 
-class ExperienceSection extends React.Component{
+class ExperienceIndex extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -38,4 +38,4 @@ class ExperienceSection extends React.Component{
         )
     }
 };
-export default ExperienceSection
+export default ExperienceIndex

@@ -2,7 +2,7 @@ import React from 'react';
 import { db } from "../../firebase";
 import Skills from './Skills';
 
-class SkillSection extends React.Component{
+class SkillsIndex extends React.Component{
 
     constructor(){
         super();
@@ -56,4 +56,4 @@ class SkillSection extends React.Component{
         );
     }
 };         
-export default SkillSection
+export default SkillsIndex

@@ -2,7 +2,7 @@ import React from 'react';
 import { db } from "../../firebase";
 import Education from './Education';
 
-class EducationSection extends React.Component{
+class EducationIndex extends React.Component{
 
     constructor(){
         super();
@@ -39,4 +39,4 @@ class EducationSection extends React.Component{
         );
     }
 };       
-export default EducationSection
+export default EducationIndex
