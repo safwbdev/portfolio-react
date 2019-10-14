@@ -46,7 +46,8 @@ class SkillSection extends React.Component{
                                         title={item.title} 
                                         type={item.type} 
                                         style={item.style} 
-                                        array={basicSkills} />
+                                        array={basicSkills} 
+                                        key={key} />
                             })}
                         </div>
                     </div>
