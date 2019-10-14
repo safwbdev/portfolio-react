@@ -49,6 +49,7 @@ class IntroIndex extends React.Component{
                         tel={this.state.tel}
                         email={this.state.email}
                         github={this.state.github}
+                        linkedin={this.state.linkedin}
                         address={this.state.address} />
                     <Description desc={this.state.desc} />
                 </div>

@@ -5,10 +5,9 @@ const Profile = props => (
     <div className="container">
         <div className="row profile-row">
             <div className="col xl3 l4 m12 s12 profile-pic">
-                <img src={ props.image } className="circle" alt="" />
+                <img src={ props.image !== null ? props.image : "http://via.placeholder.com/500x400"} className="circle" alt="" />
             </div>
             <div className="col xl9 l8 m12 s12">
-                    {/* { this.state.fName !== null && !this.state.designation !== null &&  */}
                 <div className="col s12 ">
                     <h1>{props.fName} {props.lName}</h1> 
                     <h3>{props.designation}</h3>
