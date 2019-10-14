@@ -4,7 +4,6 @@ import SkillSection from './components/SkillsSection/SkillsIndex';
 import Experience from './components/ExperienceSection/ExperienceIndex';
 import Projects from './components/ProjectSection/ProjectIndex';
 import Education from './components/EducationSection/EducationIndex';
-// import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -21,7 +20,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <Navbar /> */}
             <Intro />
             <Projects  />
             <SkillSection  />
