@@ -1,6 +1,6 @@
 import React from 'react';
-import Intro from './components/Intro';
-import SkillSection from './components/SkillsSection/SkillsIndex';
+import Intro from './components/IntroSection/IntroIndex';
+import Skills from './components/SkillsSection/SkillsIndex';
 import Experience from './components/ExperienceSection/ExperienceIndex';
 import Projects from './components/ProjectSection/ProjectIndex';
 import Education from './components/EducationSection/EducationIndex';
@@ -22,7 +22,7 @@ class App extends React.Component {
       <div>
             <Intro />
             <Projects  />
-            <SkillSection  />
+            <Skills  />
             <Experience  />
             <Education  />
             <Footer />

@@ -1,5 +1,4 @@
 import React from 'react';
-import Moment from 'react-moment';
 import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
