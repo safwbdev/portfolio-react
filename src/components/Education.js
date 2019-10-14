@@ -2,9 +2,6 @@ import React from 'react';
 import { db } from "../firebase";
 import Moment from 'react-moment';
 import Slider from "react-slick";
-import sunway from './../assets/sunway.jpg';
-import lancaster from './../assets/lancaster.jpg';
-import rmit from './../assets/rmit.jpg';
 
 class Education extends React.Component{
 
@@ -87,7 +84,7 @@ class Education extends React.Component{
                     {array.map(function(item, key){
                         return <div className="school row col xl12 l12 m12 s12" key={ key }>
                                     <div className="col xl2 l1 m2 s12 logo">
-                                        <img src={getLogo(item.edu_id)} className="circle" alt="" />
+                                        <img src={item.edu_img} className="circle" alt="" />
                                     </div>
                                     <div className="col xl10 l11 m10 s12">
                                     <div>
@@ -102,18 +99,6 @@ class Education extends React.Component{
                                 </div>;
                     })}
             </Slider>
-        }
-        function getLogo(id){
-            switch(id) {
-                case 1:
-                    return sunway;
-                case 2:
-                    return lancaster;
-                case 3:
-                    return rmit;
-                default:
-                  return 'http://via.placeholder.com/400x400';
-              }
         }
     }
 };       
