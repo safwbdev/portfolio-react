@@ -51,14 +51,12 @@ class Intro extends React.Component{
                                 <img src={ this.state.image !== null ? this.state.image : "http://via.placeholder.com/500x400"} className="circle" alt="" />
                             </div>
                             <div className="col xl9 l8 m12 s12">
+                                    { this.state.fName !== null && !this.state.designation !== null && 
                                 <div className="col s12 ">
-                                    <h1>
-                                        {this.state.fName} {this.state.lName}
-                                    </h1> 
-                                    <h3>
-                                        {this.state.designation}
-                                    </h3>
+                                    <h1>{this.state.fName} {this.state.lName}</h1> 
+                                    <h3>{this.state.designation}</h3>
                                 </div>
+        }
                                 <div className="col xl12 l12 m12 s12 contact-details">
                                     <div className="col xl6 l6 m6 s6 phone">
                                         <a href={"tel:" + this.state.tel} >
