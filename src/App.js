@@ -68,7 +68,12 @@ componentDidMount() {
             <Skills  />
             <Experience  />
             <Education  />
-            <Footer />
+            <Footer
+            tel={this.state.tel}
+            email={this.state.email}
+            github={this.state.github}
+            linkedin={this.state.linkedin}
+             />
       </div>
     );
   }

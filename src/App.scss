@@ -1,3 +1,17 @@
+footer{
+  background-image: linear-gradient(to bottom, #0acffe 0%, #495aff 100%);
+  a{
+    color: #ffffff;
+    font-weight: bold;
+    .btn-floating{
+      background: #ffffff;
+      color: #495aff;
+    }
+  }
+  .footer-copyright{
+    font-weight: bold;
+  }
+}
 @media only screen and (max-width: 768px) {
   html, body{
     overflow-x: hidden;

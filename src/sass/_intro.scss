@@ -159,7 +159,9 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .intro-section{
+
     .profile-row{
+      height: 70vh;
       .profile-pic{
         img{
           width: 50%;

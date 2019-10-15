@@ -30,12 +30,12 @@ class Profile extends React.Component{
                             </div>
                             <div className="col xl6 l6 m6 s6 github">
                                 <a href={this.props.github} target="_blank" rel="noopener noreferrer" >
-                                    <FontAwesomeIcon icon={['fab', 'github']} /> <span className="hide-on-small-only">See my&nbsp;</span><span>Github</span>
+                                    <FontAwesomeIcon icon={['fab', 'github']} /> <span className="hide-on-small-only">Check out my&nbsp;</span><span>Github</span>
                                 </a>
                             </div>
                             <div className="col xl6 l6 m6 s6 linkedin">
                                 <a href={this.props.linkedin} target="_blank" rel="noopener noreferrer" >
-                                    <FontAwesomeIcon icon={['fab', 'linkedin']} /> <span className="hide-on-small-only">Check out my&nbsp;</span><span >Linkedin</span>
+                                    <FontAwesomeIcon icon={['fab', 'linkedin']} /> <span className="hide-on-small-only">Visit my&nbsp;</span><span >Linkedin</span>
                                 </a>
                             </div>
                             <div className="col xl12 l12 m12 s12 address">
