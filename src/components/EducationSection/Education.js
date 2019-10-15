@@ -43,7 +43,7 @@ var settings = {
   };
   
 const Education = props => (
-    <Slider {...settings}>
+    <Slider className="wow fadeIn" {...settings}>
         {props.array.map(function(item, key){
             return  <div className="school row col xl12 l12 m12 s12" key={ key }>
             <div className="col xl2 l1 m2 s12 logo">

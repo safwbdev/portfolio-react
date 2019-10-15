@@ -1,6 +1,7 @@
 import React from 'react';
 import { db } from "../../firebase";
 import Skills from './Skills';
+import WOW from "wowjs";
 
 class SkillsIndex extends React.Component{
 
@@ -11,6 +12,8 @@ class SkillsIndex extends React.Component{
         }
     }
     componentDidMount() {
+        const wow = new WOW.WOW();
+        wow.init();
         db.collection("skills")
         .orderBy('skill_name', 'asc')
         .get()
@@ -39,7 +42,7 @@ class SkillsIndex extends React.Component{
             <div className="skills-section">
                 <div className="container">
                     <div className="row">
-                        <h4>Skills</h4>
+                        <h4 className="wow fadeIn">Skills</h4>
                         <div className="col s12">
                             {skillDetails.map(function(item, key){
                                 return <Skills 

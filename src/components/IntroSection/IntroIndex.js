@@ -3,7 +3,6 @@ import Description from './Description';
 import Profile from './Profile';
 import WOW from "wowjs";
 
-
 class IntroIndex extends React.Component{
 
     componentDidMount(){
@@ -31,6 +30,7 @@ class IntroIndex extends React.Component{
             </div>
         )
     }
+
 };
 
 export default IntroIndex;

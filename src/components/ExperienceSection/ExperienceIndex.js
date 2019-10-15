@@ -1,6 +1,7 @@
 import React from 'react';
 import { db } from "../../firebase";
 import Experience from './Experience';
+import WOW from "wowjs";
 
 class ExperienceIndex extends React.Component{
     constructor(){
@@ -10,6 +11,8 @@ class ExperienceIndex extends React.Component{
         }
     }
     componentDidMount() {
+        const wow = new WOW.WOW();
+        wow.init();
         db.collection("experience")
         .orderBy('work_start', 'desc')
         .get()
@@ -28,7 +31,7 @@ class ExperienceIndex extends React.Component{
             <div className="work-section">
                 <div className="container">
                     <div className="row">
-                        <h4>Work Experience</h4>
+                        <h4 className="wow fadeIn">Work Experience</h4>
                         <div className="col xl12 l12 m12 s12 slider-row">
                             <Experience array={experienceList} />
                         </div>

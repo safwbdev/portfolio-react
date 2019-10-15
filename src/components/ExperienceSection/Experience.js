@@ -51,7 +51,7 @@ var settings = {
 }
   
 const Experience = props => (
-    <Slider {...settings}>
+    <Slider className="wow fadeIn" {...settings}>
         {props.array.map(function(item, key){
              return <div className="work row col xl12 l12 m12 s12" key={ key }>
              <div className="col xl1 l1 m2 s12 logo">
