@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import WOW from "wowjs";
+import profile_img from './../../assets/profile.jpg';
 
 
 class Profile extends React.Component{
@@ -10,7 +10,7 @@ class Profile extends React.Component{
             <div className="container">
                 <div className="row profile-row">
                     <div className="col xl3 l4 m12 s12 profile-pic wow bounceIn">
-                        <img src={ this.props.image } className="circle" alt="" />
+                        <img src={ profile_img } className="circle" alt="" />
                     </div>
                     <div className="col xl9 l8 m12 s12">
                         <div className="col s12 ">

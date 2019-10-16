@@ -2,6 +2,9 @@ import React from 'react';
 import Moment from 'react-moment';
 import Slider from "react-slick";
 import nologo from './../../assets/nologo.png';
+import uni_img_1 from './../../assets/uni_img_1.jpg';
+import uni_img_2 from './../../assets/uni_img_2.jpg';
+import uni_img_3 from './../../assets/uni_img_3.jpg';
 
 var settings = {
     dots: false,
@@ -41,14 +44,27 @@ var settings = {
         }
 
       ]
-  };
+};
+
+function getLogo(id){
+    switch(id) {
+        case 1:
+            return uni_img_1;
+        case 2:
+            return uni_img_2;
+        case 3:
+            return uni_img_3;
+        default:
+            return nologo;
+    }
+}
   
 const Education = props => (
     <Slider className="wow fadeIn" {...settings}>
         {props.array.map(function(item, key){
             return  <div className="school row col xl12 l12 m12 s12" key={ key }>
             <div className="col xl2 l1 m2 s12 logo">
-                <img src={ item.edu_img !== null ? item.edu_img : nologo } className="circle" alt="" />
+                <img src={ getLogo(item.edu_id) } className="circle" alt="" />
             </div>
             <div className="col xl10 l11 m10 s12">
             <div>

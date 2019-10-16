@@ -39,15 +39,13 @@ componentDidMount() {
                     address: data[0].address,
                     github: data[0].githubUrl,
                     linkedin: data[0].linkedinUrl,
-                    image: data[0].image,
                     desc: data[0].desc,
                     loading:false
                 })
         });
 }
   render() {
-    // return (
-      return this.state.image ==null ? (
+      return this.state.loading ? (
         <div className="loadScreen">
             <p>Loading...</p>
         </div>
@@ -61,7 +59,6 @@ componentDidMount() {
             address={this.state.address}
             github={this.state.github}
             linkedin={this.state.linkedin}
-            image={this.state.image}
             desc={this.state.desc}
              />
             <Projects  />

@@ -15,8 +15,7 @@ class IntroIndex extends React.Component{
             <div className="row">
                 <div className="col xl12 l12 m12 s12 intro-section">
                     <div className="wow fade">
-                        <Profile 
-                            image={this.props.image}
+                        <Profile
                             fName={this.props.fName}
                             designation={this.props.designation}
                             tel={this.props.tel}
