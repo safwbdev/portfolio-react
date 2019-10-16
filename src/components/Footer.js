@@ -6,7 +6,7 @@ const Footer = props => (
       <div className="container">
         <div className="row">
           <div className="col l3 m3 s12 center">
-            <a href={"tel:" +props.tel} class="">
+            <a href={"tel:" +props.tel}>
               <div className="btn-floating btn-large">
                 <FontAwesomeIcon icon={['fas', 'phone']} />
               </div>
@@ -14,7 +14,7 @@ const Footer = props => (
             </a>
           </div>
           <div className="col l3 m3 s12 center">
-            <a href={"mailto:" +props.email} class="">
+            <a href={"mailto:" +props.email}>
               <div className="btn-floating btn-large">
                 <FontAwesomeIcon icon={['fas', 'envelope']} />
               </div>
@@ -22,7 +22,7 @@ const Footer = props => (
             </a>
           </div>
           <div className="col l3 m3 s12 center">
-            <a href={props.github} class="">
+            <a href={props.github}>
               <div className="btn-floating btn-large">
               <FontAwesomeIcon icon={['fab', 'github']} />
               </div>
@@ -30,7 +30,7 @@ const Footer = props => (
             </a>
           </div>
           <div className="col l3 m3 s12 center">
-            <a href={props.linkedin} class="">
+            <a href={props.linkedin}>
               <div className="btn-floating btn-large">
                 <FontAwesomeIcon icon={['fab', 'linkedin']} />
               </div>

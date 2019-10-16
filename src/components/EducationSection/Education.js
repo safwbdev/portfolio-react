@@ -1,6 +1,7 @@
 import React from 'react';
 import Moment from 'react-moment';
 import Slider from "react-slick";
+import nologo from './../../assets/nologo.png';
 
 var settings = {
     dots: false,
@@ -47,7 +48,7 @@ const Education = props => (
         {props.array.map(function(item, key){
             return  <div className="school row col xl12 l12 m12 s12" key={ key }>
             <div className="col xl2 l1 m2 s12 logo">
-                <img src={ item.edu_img !== null ? item.edu_img : "https://via.placeholder.com/500x400"} className="circle" alt="" />
+                <img src={ item.edu_img !== null ? item.edu_img : nologo } className="circle" alt="" />
             </div>
             <div className="col xl10 l11 m10 s12">
             <div>
