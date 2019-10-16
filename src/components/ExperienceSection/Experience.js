@@ -55,7 +55,7 @@ const Experience = props => (
         {props.array.map(function(item, key){
              return <div className="work row col xl12 l12 m12 s12" key={ key }>
              <div className="col xl1 l1 m2 s12 logo">
-                 <img src={ item.work_img !== null ? item.work_img : "http://via.placeholder.com/400x400"} className="circle" alt="" />
+                 <img src={ item.work_img !== null ? item.work_img : "https://via.placeholder.com/400x400"} className="circle" alt="" />
              </div>
              <div className="col xl11 l11 m10 s12">
                  <div className="work-detail">

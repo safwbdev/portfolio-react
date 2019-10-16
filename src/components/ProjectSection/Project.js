@@ -15,7 +15,7 @@ const Project = props => (
         {props.array.map(function(item, key){
             if(item.project_type === props.projectType){
                 return <div className="project" key={ key }>
-                    <img src={ item.project_img !== null ? item.project_img : "http://via.placeholder.com/797x400"}alt="" />
+                    <img src={ item.project_img !== null ? item.project_img : "https://via.placeholder.com/797x400"}alt="" />
                     <div className="col s12">
                         <h6>{item.project_name}</h6> 
                         <p className="desc">{item.project_desc}</p>
