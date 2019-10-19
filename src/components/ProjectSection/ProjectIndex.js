@@ -130,9 +130,9 @@ class ProjectIndex extends React.Component{
                             <h5 className="wow fadeIn">Personal Projects<sup>**</sup></h5>
                             <Project array={projectList} projectType="Personal" getClass="personal wow fadeIn" getSettings={personalSettings} />
                         </div>
-                        <div className="col xl12 l12 m12 s12 wow fadeIn">
-                            <span className="tnc">** Just stuff I do for fun!</span>
-                        </div>
+                    </div>
+                    <div className="col xl12 l12 m12 s12 wow fadeIn">
+                        <span className="tnc">** Just stuff I do for fun!</span>
                     </div>
                 </div>
             </div>

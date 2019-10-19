@@ -79,9 +79,23 @@
                   display: initial;
                   }
                 }
+                .work-detail{
+                  height: 4.5em;
+                  display: block;
+                  width: 100%;
+                }
                 .desc{
                   text-align: left;;
                   font-size: 16px;
+                }
+                .btn{
+                  height: auto;
+                  line-height: 1.5em;
+                  padding: 10px;
+                  font-weight: bold;
+                  margin-top: 20px;
+                  font-size: 0.9em;
+                  background: #4eacfe;
                 }
               }
             }

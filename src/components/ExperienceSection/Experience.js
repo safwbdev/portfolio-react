@@ -87,10 +87,10 @@ const Experience = props => (<div>
                     <div className="desc hide-on-small-only">
                         {getDesc(item.work_desc)}
                     </div>
+                </div>
                     <div className="hide-on-med-and-up">
                         <a className="waves-effect waves-light btn modal-trigger" data-target={"descmodal"+key}>View Tasks & Responsibilities</a>
                     </div>
-                </div>
          </div>;
         })}
         </Slider>
