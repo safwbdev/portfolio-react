@@ -3,9 +3,6 @@ import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 
 class Modal extends Component {
-    constructor(props){
-        super(props);
-    }
   componentDidMount() {
     const options = {
       onOpenStart: () => {
@@ -28,11 +25,6 @@ class Modal extends Component {
       endingTop: "10%"
     };
     M.Modal.init(this.Modal, options);
-
-    // let instance = M.Modal.getInstance(this.Modal);
-    // instance.open();
-    // instance.close();
-    // instance.destroy();
   }
 
   render() {
@@ -40,9 +32,9 @@ class Modal extends Component {
       <div>
         <div ref={Modal => { this.Modal = Modal;}} id={this.props.getId} className="modal work">
         <div className="modal-footer">
-            <a className="modal-close waves-effect waves-green btn-flat">
+            <span className="modal-close waves-effect waves-green btn-flat">
               x
-            </a>
+            </span>
           </div>
           <div className="modal-content desc">
             <h5>Tasks & Responsibilities at <div>{this.props.company}</div></h5>

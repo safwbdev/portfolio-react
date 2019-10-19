@@ -89,7 +89,7 @@ const Experience = props => (<div>
                     </div>
                 </div>
                     <div className="hide-on-med-and-up">
-                        <a className="waves-effect waves-light btn modal-trigger" data-target={"descmodal"+key}>View Tasks & Responsibilities</a>
+                        <span className="waves-effect waves-light btn modal-trigger" data-target={"descmodal"+key}>View Tasks & Responsibilities</span>
                     </div>
          </div>;
         })}

@@ -20,6 +20,14 @@ footer{
   html, body{
     overflow-x: hidden;
   }
+  footer{
+    a{
+      svg{
+        font-size: 1.5em !important;
+        vertical-align: -0.2em !important;
+      }
+    }
+  }
 }
 @import 'sass/intro';
 @import 'sass/skills';
