@@ -113,3 +113,15 @@
       }
     }
   }
+.modal{
+  &.work{
+    width: 90%;
+
+    h5{
+      text-align: center;
+      div{
+        font-weight: bold;
+      }
+    }
+  }
+}
