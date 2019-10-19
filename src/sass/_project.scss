@@ -19,13 +19,23 @@
           padding: 0;
           font-size: 20px;
         }
-        // .desc{}
-        // .chip{}
+        .desc{
+          height:7em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        ul{
+          height: 5em;
+        }
         .links{
+            margin-bottom: 10px;
+
           span{
             a{
               text-decoration: none;
-              color: #333333;
+              // color: #333333;
+              color: #ffffff;
               font-weight: bold;
             }
           }
@@ -48,7 +58,7 @@
               border: 1px solid #e4e4e4;
               float: left;
               width: 30% !important;
-              height: 450px;
+              // height: 450px;
               margin:  5px;
             }
           }
@@ -73,6 +83,9 @@
       .slider-row{
         padding: 0 0 0 10px;
         .slick-slider {
+          .slick-arrow{
+            display:none !important;
+          }
           .slick-list{
             padding: 0 !important;
             .slick-track{
@@ -81,8 +94,9 @@
           }
           &.slick-initialized {
             .slick-slide{
-              border-right: 5px solid #ffffff;
-              background: #bbe0ff;
+              // border-right: 5px solid #ffffff;
+              background: #000000;
+              border-right: 5px solid #302E30;
               margin: 0 0px;
               height: inherit;
               float: left;
@@ -92,6 +106,7 @@
                 text-align: left;
                 .desc{
                   font-size: 16px;
+                  display: block;
                 }
                 .chip{
                   font-size: 12px;
@@ -100,8 +115,10 @@
                 }
                 .links{
                   a{
-                    border: 1px solid #4eacfe;
-                    background: #4eacfe;
+                    // border: 1px solid #4eacfe;
+                    border: 2px solid #ffffff;
+                    background: transparent;
+                    // background: #4eacfe;
                     color: #ffffff;
                     padding: 10px;
                     margin: 0 5px 10px 5px;
@@ -128,7 +145,7 @@
             .slick-list{
               .slick-track{
                 .slick-slide{
-                  height: 450px;
+                  // height: 450px;
                 }
               }
             }

@@ -55,6 +55,9 @@
       .slider-row{
         padding: 0 0 0 10px;
         .slick-slider {
+          .slick-arrow{
+            display:none !important;
+          }
           .slick-list{
             padding: 0 !important;
             .slick-track{
@@ -63,8 +66,10 @@
           }
           &.slick-initialized {
             .slick-slide{
-              border-right: 5px solid #ffffff;
-              background: #bbe0ff;
+              // border-right: 5px solid #ffffff;
+              border-right: 5px solid #302E30;
+              background: #000000;
+              // background: #bbe0ff;
               margin: 0 0px;
               padding: 15px 0;
               height: inherit;
@@ -95,7 +100,9 @@
                   font-weight: bold;
                   margin-top: 20px;
                   font-size: 0.9em;
-                  background: #4eacfe;
+                  background: #000000;
+                  // background: #4eacfe;
+                  border:2px solid #ffffff
                 }
               }
             }
@@ -130,12 +137,25 @@
 .modal{
   &.work{
     width: 90%;
+    border: 1px solid #ffffff;
 
     h5{
       text-align: center;
       div{
         font-weight: bold;
       }
+    }
+  }
+  &-content{
+    background: #000000;
+    padding: 1px 10px 10px 10px !important;
+  }
+  &-footer{
+    background: #000000 !important;
+    .modal-close{
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.5em;
     }
   }
 }

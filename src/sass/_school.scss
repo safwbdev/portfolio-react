@@ -48,6 +48,9 @@
       .slider-row{
         padding: 0 0 0 10px;
         .slick-slider {
+          .slick-arrow{
+            display:none !important;
+          }
           .slick-list{
             padding: 0 !important;
             .slick-track{
@@ -56,8 +59,10 @@
           }
           &.slick-initialized {
             .slick-slide{
-              border-right: 5px solid #ffffff;
-              background: #bbe0ff;
+              // border-right: 5px solid #ffffff;
+              border-right: 5px solid #302E30;
+              background: #000000;
+              // background: #bbe0ff;
               margin: 0 0px;
               height: inherit;
               .school{

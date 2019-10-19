@@ -1,7 +1,7 @@
 .intro-section{
   padding: 0 !important;
-  background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
-  padding: 0;
+  background-image: linear-gradient(to top, #0e1025 0%, #373447 100%);
+
   .row{
     margin-bottom: 0;
   }
@@ -24,7 +24,8 @@
     .col{
       margin-bottom: 30px;
       a{
-        color: #000000;
+        // color: #000000;
+        color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: left;
@@ -41,7 +42,7 @@
   }
 }
 .loadScreen{
-  background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
+  background-image: linear-gradient(to top, #0e1025 0%, #373447 100%);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -53,6 +54,7 @@
 }
 .desc-section{
   padding: 0;
+  background: #302E30;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,7 +103,7 @@
 }
 @media only screen and (max-width: 768px) {
   .intro-section{
-    background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(to top, #0e1025 0%, #373447 100%);
     padding: 0;
     .profile-row{
       display: block;
@@ -130,15 +132,18 @@
           padding: 0 5px;
           a{
             width: 100%;
-            order: none;
+            // border: none;
+            border: 2px solid #ffffff;
             border-radius: 5px;
             justify-content: center;
             text-align: center;
             line-height: 36px;
+            font-weight: bold;
             padding: 10px;
             vertical-align: middle;
             -webkit-tap-highlight-color: transparent;
-            background: #ffffff;
+            // background: #ffffff;
+            background: transparent;
             span{
               font-size: 16px;
             }

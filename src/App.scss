@@ -1,11 +1,15 @@
+body{
+  background: #302E30;
+  color: #ffffff;
+}
 footer{
-  background-image: linear-gradient(to bottom, #0acffe 0%, #495aff 100%);
+  background-image: linear-gradient(to top, #0e1025 0%, #373447 100%);
   a{
     color: #ffffff;
     font-weight: bold;
     .btn-floating{
       background: #ffffff;
-      color: #495aff;
+      color: #0e1025;
     }
   }
   .footer-copyright{

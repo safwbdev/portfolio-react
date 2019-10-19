@@ -39,14 +39,14 @@ class Modal extends Component {
     return (
       <div>
         <div ref={Modal => { this.Modal = Modal;}} id={this.props.getId} className="modal work">
+        <div className="modal-footer">
+            <a className="modal-close waves-effect waves-green btn-flat">
+              x
+            </a>
+          </div>
           <div className="modal-content desc">
             <h5>Tasks & Responsibilities at <div>{this.props.company}</div></h5>
             {this.props.desc}
-          </div>
-          <div className="modal-footer">
-            <a className="modal-close waves-effect waves-green btn-flat">
-              Close
-            </a>
           </div>
         </div>
       </div>
