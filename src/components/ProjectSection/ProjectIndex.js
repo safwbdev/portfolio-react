@@ -71,14 +71,14 @@ class ProjectIndex extends React.Component{
             dots: false,
             infinite: false,
             speed: 500,
-            slidesToShow:6,
+            slidesToShow:7,
             slidesToScroll: 1,
             arrows: true,
             responsive: [
                 {
                     breakpoint: 1200,
                     settings: {
-                        slidesToShow: 6,
+                        slidesToShow: 7,
                         slidesToScroll: 1
                     }
                 },

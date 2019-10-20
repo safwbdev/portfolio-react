@@ -9,6 +9,7 @@ import project_img_4 from './../../assets/project_img_4.png';
 import project_img_5 from './../../assets/project_img_5.png';
 import project_img_6 from './../../assets/project_img_6.png';
 import project_img_7 from './../../assets/project_img_7.png';
+import project_img_8 from './../../assets/project_img_8.png';
 
   function getTools(array) {
     return <ul>
@@ -37,6 +38,8 @@ function getImage(id){
             return project_img_3;
         case 12:
             return project_img_7;
+        case 13:
+            return project_img_8;
         default:
             return noScreenshot;
       }
