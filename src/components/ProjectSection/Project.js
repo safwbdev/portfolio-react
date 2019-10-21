@@ -10,6 +10,7 @@ import project_img_5 from './../../assets/project_img_5.png';
 import project_img_6 from './../../assets/project_img_6.png';
 import project_img_7 from './../../assets/project_img_7.png';
 import project_img_8 from './../../assets/project_img_8.png';
+import project_img_9 from './../../assets/project_img_9.png';
 
   function getTools(array) {
     return <ul>
@@ -20,22 +21,23 @@ import project_img_8 from './../../assets/project_img_8.png';
 }
 function getImage(id){
     switch(id) {
-        case 8:
-            return project_img_1;
-        case 9:
-            return project_img_2;
-        case 7:
-            return project_img_3;
-        case 10:
-            return project_img_4;
-        case 11:
-            return project_img_5;
-        case 3:
-            return noScreenshot;
+
         case 1:
             return project_img_6;
         case 2:
             return project_img_3;
+        case 3:
+            return project_img_9;
+        case 7:
+            return project_img_3;
+        case 8:
+            return project_img_1;
+        case 9:
+            return project_img_2;
+        case 10:
+            return project_img_4;
+        case 11:
+            return project_img_5;
         case 12:
             return project_img_7;
         case 13:
