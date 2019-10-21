@@ -8,30 +8,43 @@ class ProjectIndex extends React.Component{
     constructor(){
         super();
         this.state = {
-            projects:[]
+            clientProjects:[],
+            personalProjects:[],
         }
     }
     componentDidMount() {
         const wow = new WOW.WOW();
         wow.init();
+
         db.collection("projects")
+        .where("project_type", "==", "Client")
         .get()
         .then(querySnapshot => {
             const data = querySnapshot.docs.map(doc => doc.data());
             this.setState({
-                projects: this.state.projects.concat(data) 
-            })                
+                clientProjects: this.state.clientProjects.concat(data) 
+            })
+        });
+
+        db.collection("projects")
+        .where("project_type", "==", "Personal")
+        .get()
+        .then(querySnapshot => {
+            const data = querySnapshot.docs.map(doc => doc.data());
+            this.setState({
+                personalProjects: this.state.personalProjects.concat(data) 
+            })
         });
     }
 
     render(){
-
-        const projectList = this.state.projects;
+        const clientList = this.state.clientProjects;
+        const personalList = this.state.personalProjects;
         var clientSettings = {
             dots: false,
             infinite: false,
             speed: 500,
-            slidesToShow: 2,
+            slidesToShow: clientList.length,
             slidesToScroll: 1,
             arrows: true,
             responsive: [
@@ -71,7 +84,7 @@ class ProjectIndex extends React.Component{
             dots: false,
             infinite: false,
             speed: 500,
-            slidesToShow:7,
+            slidesToShow:personalList.length,
             slidesToScroll: 1,
             arrows: true,
             responsive: [
@@ -107,7 +120,6 @@ class ProjectIndex extends React.Component{
                         dots: true,
                   }
                 }
-
             ]
         };
         return(
@@ -119,7 +131,7 @@ class ProjectIndex extends React.Component{
                     <div className="row">
                         <div className="col xl12 l12 m12 s12 slider-row">
                             <h5 className="wow fadeIn">Client Projects<sup>*</sup></h5>
-                            <Project array={projectList} projectType="Client" getClass="client wow fadeIn" getSettings={clientSettings} />
+                            <Project array={clientList} projectType="Client" getClass="client wow fadeIn" getSettings={clientSettings} />
                         </div>
                     </div>
                     <div className="col xl12 l12 m12 s12 wow fadeIn">
@@ -128,7 +140,7 @@ class ProjectIndex extends React.Component{
                     <div className="row">
                         <div className="col xl12 l12 m12 s12 slider-row">
                             <h5 className="wow fadeIn">Personal Projects<sup>**</sup></h5>
-                            <Project array={projectList} projectType="Personal" getClass="personal wow fadeIn" getSettings={personalSettings} />
+                            <Project array={personalList} projectType="Personal" getClass="personal wow fadeIn" getSettings={personalSettings} />
                         </div>
                     </div>
                     <div className="col xl12 l12 m12 s12 wow fadeIn">
