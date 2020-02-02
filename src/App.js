@@ -25,25 +25,25 @@ class App extends React.Component {
         basicSkills:[],
         loading:true
     }
-}
-componentDidMount() {
-    db.collection("personal")
-        .get()
-        .then(querySnapshot => {
-            const data = querySnapshot.docs.map(doc => doc.data());
-                this.setState({
-                    fName:data[0].fullName,
-                    designation: data[0].designation,
-                    tel: data[0].tel,
-                    email: data[0].email,
-                    address: data[0].address,
-                    github: data[0].githubUrl,
-                    linkedin: data[0].linkedinUrl,
-                    desc: data[0].desc,
-                    loading:false
-                })
-        });
-}
+  }
+  componentDidMount() {
+      db.collection("personal")
+          .get()
+          .then(querySnapshot => {
+              const data = querySnapshot.docs.map(doc => doc.data());
+                  this.setState({
+                      fName:data[0].fullName,
+                      designation: data[0].designation,
+                      tel: data[0].tel,
+                      email: data[0].email,
+                      address: data[0].address,
+                      github: data[0].githubUrl,
+                      linkedin: data[0].linkedinUrl,
+                      desc: data[0].desc,
+                      loading:false
+                  })
+          });
+  }
   render() {
       return this.state.loading ? (
         <div className="loadScreen">
@@ -52,24 +52,24 @@ componentDidMount() {
     ) : (
       <div>
             <Intro
-            fName={this.state.fName}
-            designation={this.state.designation}
-            tel={this.state.tel}
-            email={this.state.email}
-            address={this.state.address}
-            github={this.state.github}
-            linkedin={this.state.linkedin}
-            desc={this.state.desc}
+              fName={this.state.fName}
+              designation={this.state.designation}
+              tel={this.state.tel}
+              email={this.state.email}
+              address={this.state.address}
+              github={this.state.github}
+              linkedin={this.state.linkedin}
+              desc={this.state.desc}
              />
             <Projects  />
-            <Skills  />
-            <Experience  />
-            <Education  />
+            <Skills />
+            <Experience />
+            <Education />
             <Footer
-            tel={this.state.tel}
-            email={this.state.email}
-            github={this.state.github}
-            linkedin={this.state.linkedin}
+              tel={this.state.tel}
+              email={this.state.email}
+              github={this.state.github}
+              linkedin={this.state.linkedin}
              />
       </div>
     );
