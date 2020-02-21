@@ -5,6 +5,7 @@ import Experience from './components/ExperienceSection/ExperienceIndex';
 import Projects from './components/ProjectSection/ProjectIndex';
 import Education from './components/EducationSection/EducationIndex';
 import Footer from './components/Footer';
+import ReactLoading from 'react-loading';
 
 import { db } from "./firebase";
 
@@ -12,6 +13,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
+
 
 import './App.scss';
 
@@ -47,7 +49,11 @@ class App extends React.Component {
   render() {
       return this.state.loading ? (
         <div className="loadScreen">
-            <p>Loading...</p>
+            <ReactLoading 
+              type='bars' 
+              color='#ffffff' 
+              height={50} 
+              width={50} />
         </div>
     ) : (
       <div>
