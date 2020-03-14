@@ -12,6 +12,8 @@ import project_img_7 from './../../assets/project_img_7.png';
 import project_img_8 from './../../assets/project_img_8.png';
 import project_img_9 from './../../assets/project_img_9.png';
 import project_img_10 from './../../assets/project_img_10.png';
+import project_img_11 from './../../assets/project_img_11.png';
+import project_img_12 from './../../assets/project_img_12.png';
 
   function getTools(array) {
     return <ul>
@@ -45,6 +47,10 @@ function getImage(id){
             return project_img_8;
         case 15:
             return project_img_10;
+        case 16:
+            return project_img_12;
+        case 17:
+            return project_img_11;
         default:
             return noScreenshot;
       }
@@ -54,6 +60,7 @@ const Project = props => (
         {props.array.map(function(item, key){
             if(item.project_type === props.projectType){
                 return <div className="project" key={ key }>
+                    {/* {item.project_id} */}
                     <img src={ getImage(item.project_id) }alt="" />
                     <div className="col s12">
                         <h6>{item.project_name}</h6> 
