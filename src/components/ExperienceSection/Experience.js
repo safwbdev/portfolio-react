@@ -12,7 +12,7 @@ var settings = {
   dots: false,
   infinite: false,
   speed: 500,
-  slidesToShow: 5,
+  slidesToShow: 6,
   slidesToScroll: 1,
   arrows: true,
   responsive: [
@@ -26,7 +26,7 @@ var settings = {
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 6,
         slidesToScroll: 1,
         centerMode: false,
         arrows: true,
@@ -50,9 +50,9 @@ var settings = {
 function getDesc(array) {
   return (
     <ul>
-      {/* {array.map(function (item, key) {
+      {array.map(function (item, key) {
         return <li key={key}>{item}</li>;
-      })} */}
+      })}
     </ul>
   );
 }

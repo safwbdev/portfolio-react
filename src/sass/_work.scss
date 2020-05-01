@@ -1,46 +1,46 @@
-.work-section{
-  h4{
+.work-section {
+  h4 {
     font-size: 2.5em;
     font-weight: bold;
     text-align: center;
   }
-  .slick-track{
+  .slick-track {
     width: 100%;
   }
-  .slick-slide{
+  .slick-slide {
     width: 100% !important;
     float: left;
     @media only screen and (max-width: 767px) {
       padding: 15px;
     }
   }
-  .work{
+  .work {
     padding: 0;
 
-    .logo{
-      img{
+    .logo {
+      img {
         width: 100%;
       }
     }
-    .position{
+    .position {
       font-weight: bold;
       font-size: 17px;
     }
-    .duration{
+    .duration {
       font-size: 16px;
     }
-    .company{
+    .company {
       font-weight: bold;
     }
-    .location{
+    .location {
       font-size: 16px;
       font-style: italic;
     }
-    .desc{
-      ul{
+    .desc {
+      ul {
         list-style-type: initial;
         margin: 10px 0 25px 30px;
-        li{
+        li {
           list-style-type: initial;
         }
       }
@@ -48,52 +48,50 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .work-section{
-    .container{
+  .work-section {
+    .container {
       padding: 0;
       width: 100%;
-      .slider-row{
+      .slider-row {
         padding: 0 0 0 10px;
         .slick-slider {
-          .slick-arrow{
-            display:none !important;
+          .slick-arrow {
+            display: none !important;
           }
-          .slick-list{
+          .slick-list {
             padding: 0 !important;
-            .slick-track{
+            .slick-track {
               display: flex;
             }
           }
           &.slick-initialized {
-            .slick-slide{
-              // border-right: 5px solid #ffffff;
-              border-right: 5px solid #302E30;
+            .slick-slide {
+              border-right: 5px solid #302e30;
               background: #000000;
-              // background: #bbe0ff;
               margin: 0 0px;
               padding: 15px 0;
               height: inherit;
-              .work{
+              .work {
                 padding: 0;
                 text-align: center;
-                .logo{
+                .logo {
                   text-align: center;
                   float: left;
-                  img{
-                  width: 50%;
-                  display: initial;
+                  img {
+                    width: 50%;
+                    display: initial;
                   }
                 }
-                .work-detail{
+                .work-detail {
                   height: 4.5em;
                   display: block;
                   width: 100%;
                 }
-                .desc{
-                  text-align: left;;
+                .desc {
+                  text-align: left;
                   font-size: 16px;
                 }
-                .btn{
+                .btn {
                   height: auto;
                   line-height: 1.5em;
                   padding: 10px;
@@ -101,8 +99,7 @@
                   margin-top: 20px;
                   font-size: 0.9em;
                   background: #000000;
-                  // background: #4eacfe;
-                  border:2px solid #ffffff
+                  border: 2px solid #ffffff;
                 }
               }
             }
@@ -112,47 +109,43 @@
     }
   }
 }
-@media only screen 
-  and (min-width: 768px) 
-  and (max-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .work-section{
-      .container{
-        .slider-row{
-          padding: 0;
-          .slick-track{
-            display: block;
-            .slick-slide{
-              width: 100% !important;
-              float: left;
-              border: 0;
-              background:unset;
-            }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .work-section {
+    .container {
+      .slider-row {
+        padding: 0;
+        .slick-track {
+          display: block;
+          .slick-slide {
+            width: 100% !important;
+            float: left;
+            border: 0;
+            background: unset;
           }
         }
       }
     }
   }
-.modal{
-  &.work{
+}
+.modal {
+  &.work {
     width: 90%;
     border: 1px solid #ffffff;
 
-    h5{
+    h5 {
       text-align: center;
-      div{
+      div {
         font-weight: bold;
       }
     }
   }
-  &-content{
+  &-content {
     background: #000000;
     padding: 1px 10px 10px 10px !important;
   }
-  &-footer{
+  &-footer {
     background: #000000 !important;
-    .modal-close{
+    .modal-close {
       color: #ffffff;
       font-weight: bold;
       font-size: 1.5em;
