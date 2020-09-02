@@ -1,10 +1,10 @@
 import React from "react";
-import Intro from "./components/IntroSection/IntroIndex";
-import Skills from "./components/SkillsSection/SkillsIndex2";
-import Experience from "./components/ExperienceSection/ExperienceIndex";
-import Projects from "./components/ProjectSection/ProjectIndex";
-import Education from "./components/EducationSection/EducationIndex";
-import Footer from "./components/Footer";
+// import Intro from "./components/IntroSection/IntroIndex";
+// import Skills from "./components/SkillsSection/SkillsIndex2";
+// import Experience from "./components/ExperienceSection/ExperienceIndex";
+// import Projects from "./components/ProjectSection/ProjectIndex";
+// import Education from "./components/EducationSection/EducationIndex";
+// import Footer from "./components/Footer";
 import ReactLoading from "react-loading";
 
 import { db } from "./firebase";
